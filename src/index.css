@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 selection:bg-blue-500 selection:text-white;
+  }
+}
+
+@keyframes robot-float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(-1deg);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0) rotate(1deg);
+  }
+}
+
+.robot-float {
+  animation: robot-float 4.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.robot-watermark {
+  animation: robot-float 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.8);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 85, 105, 1);
+}
+
+/* Markdown styling inside chat bubbles */
+.prose-dark {
+  color: #e2e8f0;
+}
+.prose-dark h1, .prose-dark h2, .prose-dark h3 {
+  color: #f8fafc;
+  font-weight: 600;
+  margin-top: 0.75em;
+  margin-bottom: 0.25em;
+}
+.prose-dark ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+.prose-dark ol {
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+.prose-dark table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+.prose-dark th, .prose-dark td {
+  border: 1px solid #334155;
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+.prose-dark th {
+  background-color: #1e293b;
+  color: #60a5fa;
+}
+.prose-dark code {
+  background-color: #0f172a;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.85em;
+  color: #38bdf8;
+}

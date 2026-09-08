@@ -1,0 +1,891 @@
+{
+  "universityName": "Aditya University",
+  "establishment": {
+    "type": "State Private University",
+    "location": "Surampalem, Kakinada District, Andhra Pradesh, India",
+    "act": "Andhra Pradesh Private Universities Act, 2016",
+    "origin": "Aditya Engineering College (Established 2001) under Aditya Academy (Established 1984 by Dr. N. Sesha Reddy)",
+    "groupScale": "80+ Institutions, 8,000+ Staff, 80,000+ Students across coastal Andhra Pradesh"
+  },
+  "campusInfrastructure": {
+    "size": "250+ Acre Green & Sustainable Campus",
+    "solarCapacity": "1500 kW Rooftop Solar Power Generation (Wheeling to Grid)",
+    "sustainability": "Rainwater harvesting, biogas plant, battery-operated campus vehicles, integrated waste management",
+    "wifi": "Seamless campus-wide free Wi-Fi",
+    "banking": "Canara Bank Branch & ATM on campus",
+    "unity": "Temple, Mosque, and Church standing side-by-side on campus",
+    "health": "Medical Centre with full-time doctors, free consultations, 24/7 ambulance service"
+  },
+  "contact": {
+    "phone": "+91-9989776661",
+    "email": "info@adityauniversity.in",
+    "website": "https://www.adityauniversity.in",
+    "address": "Aditya Nagar, ADB Road, Surampalem, Kakinada District, Andhra Pradesh - 533437"
+  },
+  "vision": "To be a globally recognized university through excellence in Education, Innovation and Sustainable growth.",
+  "mission": "Deliver collaborative education to prepare students for global challenges through Transformative learning, Vibrant research ecosystem, and Sustainable and inclusive community.",
+  "coreValues": [
+    "Excellence: Highest standards in education, research, and community engagement.",
+    "Inclusivity and Diversity: Inclusive environment for varied academic perspectives.",
+    "Integrity and Ethical Conduct: Ethical research, teaching, transparency, and accountability.",
+    "Global Outlook: Global knowledge, intercultural understanding, and social responsibility."
+  ],
+  "specializedCentres": [
+    {
+      "name": "Centre for Technical Training",
+      "details": "Specialised technical training for IT, analytics, and AI careers."
+    },
+    {
+      "name": "Centre for Foreign Languages",
+      "details": "Japanese language training for career opportunities in Japan."
+    },
+    {
+      "name": "Aditya Global Business Incubator (AGBI)",
+      "details": "Launchpad for student startups, hosting Google Startup Weekends, e-Weekends, and hackathons."
+    },
+    {
+      "name": "Pearson VUE Authorized Test Centre",
+      "details": "On-campus authorized testing facility for earning global professional certifications."
+    }
+  ],
+  "hostelFees": {
+    "nonAc": "\u20b91.15 Lakhs per year",
+    "ac": "\u20b91.30 Lakhs per year",
+    "inclusions": "Includes laundry expenses, medical insurance up to \u20b92 Lakhs, Wi-Fi, 24/7 security, continuous water/power, centralized mess."
+  },
+  "scholarshipMatrix": {
+    "asatFee": "\u20b9500 per attempt (Maximum 2 attempts)",
+    "renewalCriteria": "Scholarship applicable for 1st year. To renew for subsequent years, maintaining 8.0 CGPA with NO backlogs in every semester is mandatory.",
+    "sportsQuota": "100% Scholarship for International level participants; 75% Scholarship for National level participants.",
+    "btech": {
+      "group1": "CSE, AI&ML, Data Science, ECE",
+      "group2": "Civil, EEE, Mechanical, Agriculture, Mining, Petroleum",
+      "asat": {
+        "group1": [
+          "75% waiver for >97%",
+          "50% waiver for 95-96.9%",
+          "25% waiver for 92-94.9%",
+          "10% waiver for 90-91.9%"
+        ],
+        "group2": [
+          "75% waiver for >95%",
+          "50% waiver for 92-94.9%",
+          "25% waiver for 90-91.9%",
+          "10% waiver for 85-89.9%"
+        ]
+      },
+      "jee": {
+        "group1": [
+          "100% waiver for >98 percentile",
+          "75% waiver for >95 percentile",
+          "50% waiver for 90-94.9 percentile",
+          "25% waiver for 80-89.9 percentile",
+          "10% waiver for 70-79.9 percentile"
+        ],
+        "group2": [
+          "100% waiver for >95 percentile",
+          "75% waiver for >90 percentile",
+          "50% waiver for 80-89.9 percentile",
+          "25% waiver for 70-79.9 percentile",
+          "10% waiver for 65-69.9 percentile"
+        ]
+      },
+      "eapcet": {
+        "group1": [
+          "75% waiver for Rank 1-5000",
+          "50% waiver for Rank 5001-10000",
+          "25% waiver for Rank 10001-25000",
+          "10% waiver for Rank 25001-50000"
+        ],
+        "group2": [
+          "75% waiver for Rank 1-10000",
+          "50% waiver for Rank 10001-25000",
+          "25% waiver for Rank 25001-50000",
+          "10% waiver for Rank 50001-75000"
+        ]
+      },
+      "bie": {
+        "group1": [
+          "75% waiver for >98%",
+          "50% waiver for 96-97.9%",
+          "25% waiver for 94-95.9%",
+          "10% waiver for 92-93.9%"
+        ],
+        "group2": [
+          "75% waiver for >95%",
+          "50% waiver for 92.5-95%",
+          "25% waiver for 90-92.4%",
+          "10% waiver for 85-89.9%"
+        ]
+      },
+      "cbse": {
+        "group1": [
+          "75% waiver for >450 marks",
+          "50% waiver for 425-449 marks",
+          "25% waiver for 400-424 marks",
+          "10% waiver for 375-399 marks"
+        ],
+        "group2": [
+          "75% waiver for >425 marks",
+          "50% waiver for 400-425 marks",
+          "25% waiver for 375-399 marks",
+          "10% waiver for 350-374 marks"
+        ]
+      }
+    },
+    "bpharmPharmaD": {
+      "asat": [
+        "75% waiver for >97%",
+        "50% waiver for 95-96.9%",
+        "25% waiver for 92-94.9%",
+        "10% waiver for 90-91.9%"
+      ],
+      "eapcet": [
+        "75% waiver for Rank 1-4000",
+        "50% waiver for Rank 4001-10000",
+        "25% waiver for Rank 10001-25000",
+        "10% waiver for Rank 25001-35000"
+      ],
+      "neet": [
+        "75% waiver for Rank 1-10000",
+        "50% waiver for Rank 10001-15000",
+        "25% waiver for Rank 15001-25000",
+        "10% waiver for Rank 25001-35000"
+      ]
+    },
+    "bscBba": {
+      "asat": [
+        "25% waiver for >95%",
+        "20% waiver for 92-94.9%",
+        "15% waiver for 90-91.9%"
+      ],
+      "bie": [
+        "25% waiver for >95%",
+        "20% waiver for 85-94.9%",
+        "15% waiver for 75-84.9%"
+      ],
+      "cbse": [
+        "25% waiver for >475 marks",
+        "20% waiver for 425-474 marks",
+        "15% waiver for 375-424 marks"
+      ]
+    },
+    "mba": {
+      "cat": [
+        "50% waiver for >94 percentile",
+        "20% waiver for 85-94 percentile",
+        "15% waiver for 70-84.9 percentile",
+        "10% waiver for 60-69.9 percentile"
+      ],
+      "nmatCmatMat": [
+        "50% waiver for >94 percentile",
+        "20% waiver for 85-94 percentile",
+        "15% waiver for 75-84.9 percentile"
+      ]
+    }
+  },
+  "admissionCutoffs": {
+    "btechAndPharmacy": "Minimum 60% aggregate in 10+2 / Intermediate",
+    "bbaBcaBsc": "Minimum 55% aggregate in 10+2 / Intermediate",
+    "allPgPrograms": "Minimum 60% aggregate in UG Degree",
+    "phdEngineering": "Minimum 60% in relevant PG Degree",
+    "phdNonEngineering": "Minimum 55% in relevant PG Degree (Sciences, Management, Humanities)"
+  },
+  "rankingsAndRecognitions": [
+    "UGC Recognition: Included in the list of universities established as per section 2(f) of the UGC Act, 1956.",
+    "NAAC Accreditation: NAAC A++ Accredited.",
+    "NBA Accreditation: Tier-1 Accredited CE, EEE, ME, ECE, CSE, IT programs.",
+    "NIRF Ranking: 151 - 200 University Rank Band.",
+    "Times Higher Education: 50th Rank across India (1001-1500 Worldwide).",
+    "Technical Universities: 36th Rank among Technical Universities in India (54th Government & Private, 50th/14th Private Institutions).",
+    "South Zone Engineering: AAA+ Rank (4th Rank in South India, 15th Rank in Top 100 Engineering Colleges in India, 27th Rank in Top 50 Survey).",
+    "SWAYAM-NPTEL: Recognized as valuable NPTEL local chapter with rating 'AA'.",
+    "SIRO Recognition: Recognized as Scientific and Industrial Research Organisation (SIRO) by DSIR.",
+    "NABL Accreditation: All Civil Engineering Department Laboratories Accredited by NABL.",
+    "Ratings: Diamond Rating (QS I-GAUGE / Indian University Rating), Platinum Band (The Impact Rankings)."
+  ],
+  "leadership": {
+    "chancellor": "Dr. N. Sesha Reddy",
+    "proChancellors": [
+      "Dr. N. Satish Reddy",
+      "Sri. N. Deepak Reddy"
+    ],
+    "dyProChancellor": "Dr. M. Sreenivasa Reddy",
+    "viceChancellor": "Dr. M. B. Srinivas",
+    "proViceChancellors": [
+      "Dr. A. Ramesh - Pro Vice-Chancellor (Engg. & Sciences)",
+      "Dr. S. Rama Sree - Pro Vice-Chancellor (Academics)",
+      "Dr. Thangjam Ravichandra - Pro-Vice Chancellor (S & P)"
+    ],
+    "registrar": "Dr. G. Suresh",
+    "deans": [
+      "Dr. A. Saravanan - Dean (Research & Consultancy)",
+      "Dr. P. S. Ranjit - Dean (International Relations)",
+      "Dr. J. Pavan - Controller of Examinations",
+      "Dr. G. Ramakrishna - Dean (IQAC)",
+      "Dr. A. Ramakrishna - Dean (Admissions)",
+      "Dr. V. Satyanarayna - Dean (Administration)",
+      "Dr. Gandikota Ramu - Dean (Technical Training)",
+      "Dr. D. Kishore - Dean (Student Activities)",
+      "Dr. G. Sanjiv Rao - Dean (Career Development)",
+      "Dr. Y. Krishna Srinivasa Subba Rao - Dean (Student Welfare)",
+      "Dr. D. Sathis Kumar - Dean (School of Pharmacy)",
+      "Dr. G. Sridevi - Dean (School of Engineering)"
+    ],
+    "associateDeans": [
+      "Dr. M. V. Rajesh - Associate Dean (School of Computing)",
+      "Dr. A. Vanathi - Associate Dean (Freshman Engineering)",
+      "Dr. Sowjanya Bagadi - Associate Dean (School of Business)",
+      "Mr. V. Anil Chavan - Associate Dean (School of Sciences)",
+      "Mr. Maddali Srikanth - Associate Dean (IQAC)",
+      "Dr. Reminisetty Giri Prasad - Associate Dean (Admissions)",
+      "Dr. K. Ayyappa Swamy - Associate Dean (Academics)"
+    ]
+  },
+  "schools": [
+    {
+      "name": "School of Engineering",
+      "dean": "Dr. G. Sridevi",
+      "ugPrograms": [
+        "B.Tech - Agricultural Engineering",
+        "B.Tech - Artificial Intelligence and Machine Learning (AI & ML) in association with Microsoft",
+        "B.Tech - Artificial Intelligence & Machine Learning (AI & ML)",
+        "B.Tech - Artificial Intelligence and Machine Learning (AI & ML) in association with Google Cloud",
+        "B.Tech - Civil Engineering",
+        "B.Tech - Computer Science and Engineering",
+        "B.Tech - Computer Science and Engineering (Data Science)",
+        "B.Tech - Computer Science and Engineering (Data Science) in association with Google Cloud",
+        "B.Tech - Computer Science and Engineering in association with Google Cloud",
+        "B.Tech - Computer Science and Engineering in association with SAP",
+        "B.Tech - Electrical and Electronics Engineering",
+        "B.Tech - Electronics and Communication Engineering",
+        "B.Tech - Mechanical Engineering",
+        "B.Tech - Mining Engineering",
+        "B.Tech - Petroleum Technology"
+      ],
+      "pgPrograms": [
+        "M.Tech - Structural Engineering",
+        "M.Tech - Power Electronics and Drives",
+        "M.Tech - VLSI Design",
+        "M.Tech - Energy Science and Technology",
+        "M.Tech - Valuation in Real Estate and Buildings",
+        "M.Tech - Artificial Intelligence & Data Science",
+        "M.Tech - Mining Engineering (Research)",
+        "M.Tech - Computer Science & Engineering"
+      ],
+      "phdPrograms": [
+        "Ph.D in Engineering disciplines"
+      ]
+    },
+    {
+      "name": "School of Computing",
+      "ugPrograms": [
+        "Bachelor of Computer Applications (BCA)"
+      ],
+      "pgPrograms": [
+        "Master of Computer Applications (MCA)"
+      ],
+      "phdPrograms": [
+        "Ph.D in Computing & Computer Applications"
+      ]
+    },
+    {
+      "name": "School of Business",
+      "dean": "Dr. Thangjam Ravichandra",
+      "associateDean": "Dr. Sowjanya Bagadi",
+      "ugPrograms": [
+        "BBA - Business Analytics in knowledge partnership with KPMG",
+        "BBA - FinTech in knowledge partnership with EY India",
+        "BBA - Global Finance in knowledge partnership with PWC",
+        "BBA - Health Care Management in knowledge partnership with RedVersity",
+        "BBA in knowledge partnership with Deloitte"
+      ],
+      "pgPrograms": [
+        "MBA - Business Analytics in knowledge partnership with KPMG",
+        "MBA - FinTech in knowledge partnership with EY India",
+        "MBA - Global Finance in knowledge partnership with PWC",
+        "MBA - Health Care Management in knowledge partnership with RedVersity",
+        "MBA in knowledge partnership with Deloitte",
+        "MBA for Working Professionals"
+      ],
+      "phdPrograms": [
+        "Ph.D in Management & Business Studies"
+      ]
+    },
+    {
+      "name": "School of Sciences",
+      "associateDean": "Mr. V. Anil Chavan",
+      "ugPrograms": [
+        "B.Sc - Cyber Security and Digital Forensics",
+        "B.Sc - Forensic Science"
+      ],
+      "pgPrograms": [
+        "M.Sc - Cyber Security & Digital Forensics",
+        "M.Sc - Forensic Science",
+        "M.Sc - Real Estate Valuation"
+      ],
+      "phdPrograms": [
+        "Ph.D in Science & Applied Sciences"
+      ]
+    },
+    {
+      "name": "School of Pharmacy",
+      "dean": "Dr. D. Sathis Kumar",
+      "programs": [
+        "B.Pharmacy",
+        "Pharm.D",
+        "M.Pharmacy"
+      ]
+    }
+  ],
+  "timetables": [
+    {
+      "id": "tt-cse-3",
+      "program": "B.Tech Computer Science & Engineering (3rd Year / Sem 5)",
+      "section": "Section A",
+      "schedule": [
+        {
+          "day": "Monday",
+          "slots": [
+            {
+              "time": "09:00 AM - 10:00 AM",
+              "subject": "CS401: AI & Machine Learning (Microsoft)",
+              "room": "CS-101",
+              "faculty": "Dr. Sarah Jenkins"
+            },
+            {
+              "time": "10:00 AM - 11:00 AM",
+              "subject": "CS305: Algorithms (Google Cloud)",
+              "room": "CS-101",
+              "faculty": "Prof. Alan Turing Jr."
+            },
+            {
+              "time": "11:15 AM - 01:15 PM",
+              "subject": "CS-LAB3: AI & Cyber Security Lab",
+              "room": "CS-LAB3",
+              "faculty": "Dr. Sarah Jenkins"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "departments": [
+    {
+      "id": "cse",
+      "name": "School of Engineering & Computing",
+      "code": "CSE",
+      "hod": "Dr. G. Sridevi (Dean)",
+      "building": "Aditya Engineering Block A, Surampalem Campus",
+      "floor": "3rd Floor",
+      "contact": "cse@adityauniversity.in",
+      "programs": [
+        "B.Tech AI & ML",
+        "B.Tech Data Science",
+        "B.Tech CSE",
+        "M.Tech AI & Data Science"
+      ],
+      "description": "NAAC A++ and Tier-1 NBA accredited programs in Artificial Intelligence, Machine Learning, and Data Science."
+    }
+  ],
+  "classrooms": [
+    {
+      "code": "CS-101",
+      "name": "Ada Lovelace Seminar Hall",
+      "building": "Block A (Engineering Block)",
+      "floor": "Ground Floor",
+      "capacity": 120,
+      "equipment": [
+        "Dual 4K Laser Projectors",
+        "Smart Podium",
+        "Wireless Mics",
+        "AC"
+      ],
+      "directions": "Enter Aditya Surampalem Main Gate on ADB Road, proceed down main quadrangle to Block A entrance."
+    }
+  ],
+  "faculty": [
+    {
+      "id": "fac-1",
+      "name": "Dr. N. Sesha Reddy",
+      "designation": "Chancellor & Founder",
+      "department": "Aditya University Leadership",
+      "email": "chancellor@adityauniversity.in",
+      "office": "Office of the Chancellor, Admin Block",
+      "officeHours": "Mon - Fri 10:00 AM - 01:00 PM"
+    }
+  ],
+  "events": [
+    {
+      "id": "evt-1",
+      "title": "Aditya National Innovation & Research Summit 2026",
+      "category": "Tech & Innovation",
+      "date": "2026-09-28",
+      "time": "09:00 AM - 05:00 PM",
+      "venue": "Aditya Main Auditorium, Surampalem Campus",
+      "description": "Flagship research convention bringing industry leaders, incubation startups, and student researchers together."
+    }
+  ],
+  "regulations": [
+    {
+      "id": "reg-1",
+      "title": "75% Mandatory Attendance Regulations",
+      "category": "Academic Policy",
+      "summary": "Mandatory 75% attendance across all courses. Condonation up to 10% permitted strictly on medical grounds.",
+      "details": "Conducted per Andhra Pradesh Private Universities Act & UGC Guidelines."
+    }
+  ],
+  "facilities": [
+    {
+      "id": "facil-1",
+      "name": "Aditya Central Library & NPTEL Local Chapter (AA Rated)",
+      "category": "Academic & Digital Library",
+      "hours": "Mon-Sat: 08:00 AM - 10:00 PM | Exam Weeks: 24/7",
+      "location": "Central Campus Quadrangle, Surampalem",
+      "status": "Open",
+      "busyLevel": 60,
+      "amenities": [
+        "NPTEL Local Chapter AA Rated",
+        "Knimbus E-Resources",
+        "SIRO Research Access"
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1",
+      "title": "Aditya University ASAT & Merit Scholarships 2026-27 Announced",
+      "date": "2026-09-10",
+      "category": "Scholarship Notice",
+      "summary": "Up to 100% tuition fee waiver announced for ASAT, JEE, EAPCET rankers, CBSE toppers, and Sports Quota."
+    }
+  ],
+  "admissions": [
+    {
+      "id": "adm-1",
+      "program": "B.Tech Programs (AI&ML, Data Science, ECE, EEE, Mechanical, Civil, Mining, Petroleum, Agriculture)",
+      "eligibility": "10+2 with 60% aggregate in PCM + EAMCET / JEE Main rank",
+      "fee": "As per AP State Norms | Hostel: \u20b91.15 L (Non-AC), \u20b91.30 L (AC)",
+      "duration": "4 Years (8 Semesters)",
+      "applyLink": "https://www.adityauniversity.in"
+    }
+  ],
+  "hostelTransport": {
+    "hostels": [
+      {
+        "name": "Aditya Boys & Girls Residence Halls",
+        "occupancy": "2-Sharing, 3-Sharing, 4-Sharing AC/Non-AC",
+        "facilities": "24/7 Wi-Fi, Gym, Laundry, Medical Center, Centralized Mess",
+        "curfew": "09:30 PM",
+        "fee": "Non-AC: \u20b91.15 Lakhs/yr | AC: \u20b91.30 Lakhs/yr (Includes Laundry & \u20b92 Lakh Medical Insurance)"
+      }
+    ],
+    "transport": [
+      {
+        "route": "District Fleet (250+ Buses)",
+        "timing": "07:15 AM Departure | 05:15 PM Return",
+        "stops": "Scheduled bus routes across Kakinada district to Surampalem campus",
+        "annualFee": "Free transport for staff; Standard rates for day scholars"
+      }
+    ]
+  },
+  "scholarshipsFees": [
+    {
+      "name": "Aditya Scholastic Aptitude Test (ASAT) Scholarship",
+      "benefit": "10% to 75% Tuition Fee Waiver (ASAT Fee \u20b9500, max 2 attempts)",
+      "criteria": "Based on ASAT test score percentage"
+    },
+    {
+      "name": "JEE Percentile & EAPCET Rank Scholarship",
+      "benefit": "10% to 100% Tuition Fee Waiver",
+      "criteria": "100% for >98 JEE Percentile in Group 1; 75% for EAPCET Top 5000 Ranks"
+    },
+    {
+      "name": "Sports Quota Scholarship",
+      "benefit": "100% or 75% Tuition Fee Waiver",
+      "criteria": "100% for International level participation; 75% for National level participation"
+    }
+  ],
+  "facultyStats": {
+    "totalCount": "500+ Highly Qualified Faculty Members",
+    "doctoralHolders": "200+ Hold Doctoral Degrees (Ph.D) across diverse research domains",
+    "researchPapers": "1,963+ Research Papers in SCI & Scopus Indexed Journals",
+    "webOfScience": "402+ Papers Indexed in Web of Science",
+    "patents": "532 Patents Published, 37 Patents Granted",
+    "sponsoredFunding": "\u20b916.3 Crores in Government-Funded Sponsored Projects",
+    "pedagogy": "Customized, student-centric, and outcome-based teaching-learning (OBE) methodology."
+  },
+  "facultyByDepartment": {
+    "civil": {
+      "department": "Department of Civil Engineering",
+      "hod": "Dr. Bellum Ramamohan Reddy (Assistant Professor & HOD)",
+      "faculty": [
+        "Dr. Bellum Ramamohan Reddy \u2014 Assistant Professor & HOD",
+        "Dr. Anjali R \u2014 Assistant Professor",
+        "Dr. S Govindarajan \u2014 Associate Professor",
+        "Dr. Pachaiappan S \u2014 Assistant Professor",
+        "Dr. S Anandha Kumar \u2014 Assistant Professor",
+        "Dr. Yaswanth K K \u2014 Assistant Professor",
+        "Dr. Pasupuleti Laxmi Narayana \u2014 Assistant Professor",
+        "Dr. Talapareddy Suman Kumar \u2014 Assistant Professor",
+        "Dr. Ch Naga Dheeraj Kumar Reddy \u2014 Assistant Professor",
+        "Dr. Tammineni Gnananandarao \u2014 Assistant Professor",
+        "Dr. Muthyala Sai Chaithanya \u2014 Assistant Professor",
+        "Dr. Chappa Ajay \u2014 Assistant Professor",
+        "Mr. Penugonda Shiva Kumar \u2014 Assistant Professor",
+        "Ms. Panuganti Lakshmi \u2014 Assistant Professor",
+        "Mr. Gaddam Dinesh \u2014 Assistant Professor",
+        "Mr. Borra Ramsagar \u2014 Assistant Professor",
+        "Mr. Nalli Bhaskara Rao \u2014 Assistant Professor",
+        "Ms. Nataru Anusha \u2014 Assistant Professor",
+        "Mr. Bandi Maheswara Rao \u2014 Assistant Professor"
+      ]
+    },
+    "eee": {
+      "department": "Department of Electrical and Electronics Engineering (EEE)",
+      "hod": "Dr. Veeranki Srinivasa Rao (Assoc. Professor & HOD)",
+      "faculty": [
+        "Dr. Veeranki Srinivasa Rao \u2014 Assoc. Professor & HOD",
+        "Dr. A Ramesh \u2014 Pro Vice-Chancellor (Engg. & Sciences)",
+        "Dr. Jonnalagadda Pavan \u2014 Controller of Examinations",
+        "Dr. Keerty Vs Ramachandra Murthy \u2014 Professor",
+        "Dr. Boddepalli Rajani \u2014 Professor",
+        "Dr. Kommula Bapayya Naidu \u2014 Assistant Professor",
+        "Dr. Kothalanka K Pavan Kumar \u2014 Assistant Professor",
+        "Dr. Manam Ravindra \u2014 Associate Professor",
+        "Dr. Pydi Bala Krishna \u2014 Assistant Professor",
+        "Dr. Vijay Muniyandi \u2014 Assistant Professor",
+        "Dr. Balla Sri Satya Ganesh Pardhu \u2014 Associate Professor",
+        "Mr. Ballekura Veeranarayana \u2014 Assistant Professor",
+        "Mr. Kasukurthi Rambabu \u2014 Assistant Professor",
+        "Mr. Chakka Bapi Ayyappa Raju \u2014 Assistant Professor",
+        "Ms. Kunduru Sandhya Rani \u2014 Assistant Professor",
+        "Mr. Kurra Venkateswara Rao \u2014 Assistant Professor",
+        "Mr. Vadrevu Ramakrishna \u2014 Assistant Professor",
+        "Ms. Kambampati Lakshmi \u2014 Assistant Professor",
+        "Ms. Vemana U P Lavanya \u2014 Assistant Professor",
+        "Ms. Tata Himaja \u2014 Assistant Professor"
+      ]
+    },
+    "mechanical": {
+      "department": "Department of Mechanical Engineering",
+      "hod": "Dr. Saragada D V V S Bhimeshwar Reddy (Assistant Professor & HOD)",
+      "faculty": [
+        "Dr. Saragada D V V S Bhimeshwar Reddy \u2014 Assistant Professor & HOD",
+        "Dr. Medapati Sreenivasa Reddy \u2014 Dy. Pro-Chancellor",
+        "Dr. A Saravanan \u2014 Dean (Research & Consultancy)",
+        "Dr. Subrahmanya Ranjit Pasupuleti \u2014 Dean (International Relations)",
+        "Dr. Elumalai P V \u2014 Professor",
+        "Dr. Varaprasad Bhemuni \u2014 Associate Professor",
+        "Dr. Y Krishna Srinivasa Subba Rao \u2014 Dean (Student Welfare)",
+        "Dr. Akhilesh Kumar Singh \u2014 Associate Professor",
+        "Dr. Pritam Kumar Das \u2014 Associate Professor",
+        "Dr. Sandip Kunar \u2014 Assistant Professor",
+        "Dr. Mohammed Zubairuddin \u2014 Assistant Professor",
+        "Dr. G V Krishna Pradeep \u2014 Assistant Professor",
+        "Dr. Uzwalkiran Rokkala \u2014 Assistant Professor",
+        "Dr. Nitla Stanley Ebenezer \u2014 Assistant Professor",
+        "Dr. N Bhanu Teja \u2014 Assistant Professor",
+        "Dr. Ch V V M J Satish \u2014 Assistant Professor",
+        "Dr. Abbireddy Sridhar Reddy \u2014 Assistant Professor",
+        "Dr. Dara Ram Babu \u2014 Assistant Professor",
+        "Mr. Karedla Lakshmi Kishore \u2014 Assistant Professor",
+        "Mr. J D Venkatesh \u2014 Assistant Professor",
+        "Ms. Varasala Pragna \u2014 Assistant Professor",
+        "Mr. Adduri S S M Sita Rama Murthy \u2014 Assistant Professor",
+        "Mr. Pandiri Jaikishan \u2014 Assistant Professor",
+        "Ms. Mylavarapu Anusha \u2014 Assistant Professor",
+        "Mr. Kadupu Rakesh Varma \u2014 Assistant Professor",
+        "Mr. Sundarapalli Ganapathi \u2014 Assistant Professor",
+        "Mr. Subrahmanyam S \u2014 Assistant Professor",
+        "Mr. Yadluri Ravi Kishore \u2014 Assistant Professor"
+      ]
+    },
+    "ece": {
+      "department": "Department of Electronics and Communication Engineering (ECE)",
+      "hod": "Dr. Narla Venkata Lalitha (Professor) / Deans & Key Faculty",
+      "faculty": [
+        "Dr. M. B. Srinivas \u2014 Vice Chancellor",
+        "Dr. Gulivindala Suresh \u2014 Registrar",
+        "Dr. Gamini Sridevi \u2014 Dean (School of Engineering)",
+        "Dr. Mahesh Kumar Singh \u2014 Professor",
+        "Dr. R V V Krishna \u2014 Professor",
+        "Dr. G Rama Krishna \u2014 Dean (IQAC)",
+        "Dr. Sanjeev Kumar \u2014 Professor",
+        "Dr. Kondru Ayyappa Swamy \u2014 Associate Dean (Academics)",
+        "Dr. D Kishore \u2014 Dean (Student Affairs)",
+        "Dr. Nainavarapu Radha \u2014 Associate Professor",
+        "Dr. Rajyalakshmi Uppada \u2014 Associate Professor",
+        "Dr. Arigela Laxmana Siridhara \u2014 Associate Professor",
+        "Dr. Tathababu Addepalli \u2014 Associate Professor",
+        "Dr. Pamarthi Sunitha \u2014 Associate Professor",
+        "Dr. Padarti Vijayakumar \u2014 Associate Professor",
+        "Dr. Ch Venkata Ravisankar \u2014 Associate Professor",
+        "Dr. Kama Ramudu \u2014 Associate Professor",
+        "Dr. Gudivada A Arun Kumar \u2014 Associate Professor",
+        "Dr. Narla Venkata Lalitha \u2014 Professor",
+        "Dr. R Anil Kumar \u2014 Associate Professor",
+        "Dr. Chukka Rajasekhar \u2014 Associate Professor",
+        "Mr. Vella Satyanarayana \u2014 Dean (Campus Life Management)",
+        "Mr. Satti Hari Chandra Prasad \u2014 Deputy Controller of Exams",
+        "Dr. Jagatpati Raiguru \u2014 Assistant Professor",
+        "Dr. Akash Kumar Gupta \u2014 Assistant Professor",
+        "Dr. Manumula Srinubabu \u2014 Assistant Professor",
+        "Dr. Narayana Rao Pallepu \u2014 Associate Professor",
+        "Dr. Mahesh Babu Kota \u2014 Co-Ordinator (Research & Consultancy)",
+        "Dr. Inakoti Ramesh Raja \u2014 Assistant Professor",
+        "Dr. Garaga Srilakshmi \u2014 Assistant Professor",
+        "Dr. Adiraju Rama Vasantha \u2014 Associate Professor",
+        "Dr. Mandipudi Raghunath \u2014 Assistant Professor",
+        "Dr. R Raman \u2014 Associate Professor",
+        "Dr. Penumutchi Bujji Babu \u2014 Assistant Professor",
+        "Dr. Chintha Sri Pothu Raju \u2014 Assistant Professor",
+        "Dr. Hanumanthkrishnaprasad K \u2014 Assistant Professor",
+        "Dr. A Sravanthi Peddinti \u2014 Assistant Professor",
+        "Dr. Karthik Nasani \u2014 Assistant Professor",
+        "Dr. Mogadala Vinod Kumar \u2014 Associate Professor",
+        "Dr. Gupteswar Sahu \u2014 Professor",
+        "Ms. Badireddy Satya Sridevi \u2014 Assistant Professor",
+        "Mr. Budaraju Srinivas \u2014 Assistant Professor",
+        "Mr. M S R Sekhar \u2014 Assistant Professor",
+        "Mr. Amaradi Konda Babu \u2014 Assistant Professor",
+        "Mr. Gangu Rama Naidu \u2014 Assistant Professor",
+        "Mr. Murrey Neeladri \u2014 Assistant Professor",
+        "Mr. Talla Srinivasa Rao \u2014 Assistant Professor",
+        "Mr. Peteti Bala Srinivas \u2014 Assistant Professor",
+        "Ms. Katta Pavani \u2014 Assistant Professor",
+        "Ms. Chenna Veera Kiranmayi \u2014 Assistant Professor",
+        "Ms. Ykuntam Yamini Devi \u2014 Assistant Professor",
+        "Ms. S S Vidya Balantrapu \u2014 Assistant Professor",
+        "Ms. Yadhiri Yamini Sri Manogna \u2014 Assistant Professor",
+        "Mr. Kumaranarayana Swamy C \u2014 Assistant Professor",
+        "Mr. Praveen Kumar Bathula \u2014 Assistant Professor",
+        "Mr. Ramoju Bheema Sankaram \u2014 Assistant Professor",
+        "Mr. Pudi Ramesh \u2014 Assistant Professor",
+        "Dr. Miranji Katta \u2014 Assistant Professor",
+        "Dr. Siva Chakra Avinash Bikkina \u2014 Assistant Professor",
+        "Dr. Vinjamuri Venkata Kamesh \u2014 Professor",
+        "Mr. Kagithapu Rajendra \u2014 Assistant Professor",
+        "Dr. Pennada Siva Satya Prasad \u2014 Assistant Professor",
+        "Ms. Chinnari Mrudula Pothula \u2014 Assistant Professor"
+      ]
+    },
+    "freshman": {
+      "department": "Department of Freshman Engineering & Applied Sciences",
+      "hod": "Dr. A Vanathi (Associate Dean - Freshman Engineering)",
+      "faculty": [
+        "Dr. Sripada Rama Sree \u2014 Pro Vice-Chancellor (Academics)",
+        "Dr. A Vanathi \u2014 Associate Dean (Freshman Engineering)",
+        "Mr. Nalla Siva Kumar \u2014 Deputy Controller of Exams",
+        "Mr. Mylavarapu Kalyan Ram \u2014 Assistant Professor",
+        "Dr. Regella Venkata Satya Lalitha \u2014 Professor",
+        "Dr. Tatapudi Prabhakara Rao \u2014 Associate Professor",
+        "Dr. Subba Rao Polamuri \u2014 Associate Professor",
+        "Dr. Tirukoti Sudha Rani \u2014 Assistant Professor",
+        "Dr. M V B Murali Krishna M \u2014 Assistant Professor",
+        "Ms. Kasichainula Vydehi \u2014 Assistant Professor",
+        "Mr. Marni Srinu \u2014 Assistant Professor",
+        "Mr. Gandhikota Umamahesh \u2014 Assistant Professor",
+        "Mr. Ramesh Kothapalli \u2014 Assistant Professor",
+        "Ms. Rananki Padma Sri \u2014 Assistant Professor",
+        "Ms. Kadiyala Bhavani \u2014 Assistant Professor",
+        "Ms. Kondapalli Syamala Kalyani \u2014 Assistant Professor",
+        "Ms. Janapaneedi Srilakshmi \u2014 Assistant Professor",
+        "Ms. Paramalla Bhuvana Sai \u2014 Assistant Professor"
+      ]
+    },
+    "cse": {
+      "department": "Department of Computer Science and Engineering (CSE)",
+      "hod": "Dr. Makineedi Raja Babu (Associate Professor & HOD)",
+      "faculty": [
+        "Dr. Makineedi Raja Babu \u2014 Associate Professor & HOD",
+        "Ms. Karuturi Kavyaramyasree \u2014 Assistant Professor",
+        "Mr. Pattabhi Rama Mohan P \u2014 Assistant Professor",
+        "Dr. Vikram A \u2014 Assistant Professor",
+        "Mr. Soloman Raju Cherukuri \u2014 Asst. Professor",
+        "Mr. Chilli Bhanu Prakash \u2014 Assistant Professor",
+        "Ms. Parasa Keerthana \u2014 Assistant Professor",
+        "Ms. Nalam Durga Prasanna \u2014 Assistant Professor",
+        "Ms. Appana Venkata Lalitha Devi \u2014 Assistant Professor",
+        "Ms. Bhusarapu Hema Nagamani \u2014 Assistant Professor",
+        "Dr. Itha Veeranjaneyulu \u2014 Associate Professor",
+        "Ms. Pediredla Srilatha \u2014 Assistant Professor",
+        "Dr. Annemneedi Lakshmana Rao \u2014 Associate Professor",
+        "Dr. Karnam Sreenu \u2014 Assistant Professor",
+        "Mr. Antharaju K Chakravarthy \u2014 Assistant Professor",
+        "Ms. Sadineni Neelima \u2014 Assistant Professor",
+        "Mr. Gunnam Srinivas \u2014 Assistant Professor",
+        "Dr. Sunkara Sushma \u2014 Assistant Professor",
+        "Mr. Tatapudi S Ramakrishna \u2014 Assistant Professor",
+        "Mr. Vadige Sathish Kumar \u2014 Assistant Professor",
+        "Ms. Chaliki Archana \u2014 Assistant Professor",
+        "Mr. Chitneedi Kasi Viswanadham \u2014 Assistant Professor",
+        "Ms. Adduri Harika \u2014 Assistant Professor",
+        "Mr. Marisetti Kalyan Ramudu \u2014 Assistant Professor",
+        "Dr. Reminisetty Giri Prasad \u2014 Associate Dean (Admissions)",
+        "Dr. Thandlam Anil Kumar \u2014 Associate Professor",
+        "Mr. Yalla R S Narayana \u2014 Assistant Professor",
+        "Mr. Vangala V Srimannarayana \u2014 Assistant Professor"
+      ]
+    },
+    "mining_petroleum": {
+      "department": "Department of Mining Engineering & Petroleum Technology",
+      "hod": "Mr. Chikkam China Subba Rao (Assistant Professor & HOD)",
+      "faculty": [
+        "Mr. Chikkam China Subba Rao \u2014 Assistant Professor & HOD (Min E & PT)",
+        "Mr. V V Shankar Anuprakash M \u2014 Assistant Professor",
+        "Mr. Jannela Yernaidu \u2014 Assistant Professor"
+      ]
+    },
+    "agriculture": {
+      "department": "Department of Agricultural Engineering",
+      "hod": "Dr. Bodasingi Krishna Kanth (Assistant Professor & HOD)",
+      "faculty": [
+        "Dr. Bodasingi Krishna Kanth \u2014 Assistant Professor & HOD",
+        "Dr. Sundaragiri Rahaman \u2014 Assistant Professor",
+        "Dr. Vedantam Sai Krishna \u2014 Assistant Professor",
+        "Dr. Mude Vinayak \u2014 Assistant Professor",
+        "Dr. Aphia Amulya Palle \u2014 Assistant Professor",
+        "Ms. Gayam Sujatha \u2014 Assistant Professor",
+        "Dr. Budithi Gowtham Singh \u2014 Assistant Professor",
+        "Ms. Rangineni Manasa Lakshmi Durga \u2014 Assistant Professor"
+      ]
+    },
+    "ai_ds_it": {
+      "department": "Department of Artificial Intelligence, Data Science & Computing",
+      "hod": "Dr. Kovvuri N Bhargavi (Associate Professor & HOD)",
+      "faculty": [
+        "Dr. Kovvuri N Bhargavi \u2014 Associate Professor & HOD",
+        "Ms. Chinta Sri Divya \u2014 Assistant Professor",
+        "Dr. Maganti Venkatesh \u2014 Associate Professor",
+        "Dr. Suneetha Racharla \u2014 Assistant Professor",
+        "Dr. Mangalapalli Vamsikrishna \u2014 Professor",
+        "Mr. Mylavarapu Sarat Chandra Prasad \u2014 Assistant Professor",
+        "Mr. Metla Subrahmanyam \u2014 Assistant Professor",
+        "Ms. Nalla Akhila \u2014 Assistant Professor",
+        "Dr. Kaladi Govindaraju \u2014 Asst. Professor",
+        "Dr. G Sanjeeva Rao \u2014 Dean (Career Development)",
+        "Dr. Ramakrishna Reddy Mule \u2014 Assistant Professor",
+        "Mr. Vengalapudi Appalakonda \u2014 Assistant Professor",
+        "Mr. P V V S D Nagendrudu \u2014 Assistant Professor",
+        "Mr. Grandi Sivasankar \u2014 Assistant Professor",
+        "Ms. Venkata Bala Annapurna P \u2014 Assistant Professor",
+        "Dr. V Vaitheeshwaran \u2014 Assistant Professor",
+        "Ms. Gowri Sreelakshmi Neeli \u2014 Assistant Professor",
+        "Dr. P Rajamohan \u2014 Professor",
+        "Mr. Battula R S S Raju \u2014 Assistant Professor",
+        "Ms. Udayalaxmi Aditya Teki \u2014 Assistant Professor",
+        "Ms. Lavanya Kumari Pithani \u2014 Assistant Professor",
+        "Ms. Uppalapati Nagaratna Kumari \u2014 Assistant Professor",
+        "Mr. Roshan Prasad \u2014 Assistant Professor",
+        "Mr. Ketha Siva Saikishore \u2014 Assistant Professor",
+        "Ms. Sandhyarani Dash \u2014 Assistant Professor"
+      ]
+    },
+    "business": {
+      "department": "School of Business / Management Studies",
+      "hod": "Dr. Selvamalar N (Head of the Department)",
+      "faculty": [
+        "Dr. Selvamalar N \u2014 Head of the Department",
+        "Dr. Ponugoti Gangadhara Rao \u2014 Associate Professor",
+        "Dr. Kunapuli Siva Satya Mohan \u2014 Assistant Professor",
+        "Mr. Srinivas Mattaparthi \u2014 Assistant Professor",
+        "Ms. Sanipina Anjani Devi \u2014 Assistant Professor",
+        "Mr. Nulu Naresh \u2014 Assistant Professor",
+        "Mr. Kokkirapati Nagasuresh \u2014 Assistant Professor",
+        "Mr. P Uma Maheswara Rao \u2014 Assistant Professor",
+        "Ms. P Sri Gowri Padmaja \u2014 Assistant Professor",
+        "Mr. Mutyam Veera mani \u2014 Assistant Professor",
+        "Mr. Sripada NS Maruthy Vijay \u2014 Assistant Professor"
+      ]
+    },
+    "sciences": {
+      "department": "School of Sciences / Basic Sciences & Humanities",
+      "hod": "Dr. Papolu Satish (Head of the Department)",
+      "faculty": [
+        "Dr. Papolu Satish \u2014 Head of the Department",
+        "Mr. Birudoju H K Bhagat Kumar \u2014 Assistant Professor",
+        "Ms. Bitra Eswaramma \u2014 Assistant Professor",
+        "Ms. V Bharathi Devarakonda \u2014 Assistant Professor",
+        "Mr. Sailaja Pusuluri \u2014 Assistant Professor",
+        "Mr. Peddini Suresh Kumar \u2014 Assistant Professor",
+        "Mr. Pampana Murali \u2014 Assistant Professor",
+        "Ms. Bottamanchi Prameela Rani \u2014 Assistant Professor",
+        "Mr. Karri Ravi Kumar Reddy \u2014 Assistant Professor",
+        "Mr. Kondala Rao Parasa \u2014 Assistant Professor",
+        "Dr. Mohammad Ahasan \u2014 Assistant Professor",
+        "Dr. Nakka Venkata Sai Manikanta Reddy \u2014 Assistant Professor",
+        "Mr. Maddali Srikanth \u2014 Associate Dean (IQAC)",
+        "Ms. Sanapala Anusha \u2014 Assistant Professor",
+        "Mr. Jala Prasadarao \u2014 Assistant Professor",
+        "Mr. Mudunuru Suneel \u2014 Assistant Professor"
+      ]
+    },
+    "pharmacy": {
+      "department": "School of Pharmacy",
+      "hod": "Dr. Girajala Chinna Ram & Dr. Budida Jyothi (HODs)",
+      "faculty": [
+        "Dr. Angajala Rama Krishna \u2014 Dean (Admissions)",
+        "Dr. Girajala Chinna Ram \u2014 Head of the Department",
+        "Dr. Budida Jyothi \u2014 Head of the Department",
+        "Dr. Raja Sekhar Reddy P \u2014 Assistant Professor",
+        "Mr. Jagadish Kumar Chimmili \u2014 Assistant Professor",
+        "Ms. B K Vidyasagar \u2014 Assistant Professor",
+        "Ms. Cheepurupalli Hemalatha \u2014 Assistant Professor",
+        "Mr. T Lakshmi Narayana \u2014 Assistant Professor",
+        "Mr. V Kumar Reddy Majji \u2014 Assistant Professor"
+      ]
+    }
+  },
+  "placementsData": {
+    "highestPackage": "\u20b91.06 CR (M. Akhilesh & G. Rajesh - Fabrantic)",
+    "topOffers": [
+      "\u20b91.06 CR \u2014 M. Akhilesh (Fabrantic)",
+      "\u20b91.06 CR \u2014 G. Rajesh (Fabrantic)",
+      "\u20b939.60 LPA \u2014 D. Veera Venkata Durga Bhan Raju (Toyota)",
+      "\u20b931.62 LPA \u2014 Y. Ramya (Zacros)",
+      "\u20b931.62 LPA \u2014 N. Sai Raghavendra Nithin (Zacros)",
+      "\u20b929.87 LPA \u2014 P. Srinivas (AFREX)",
+      "\u20b929.87 LPA \u2014 S. Roshin Roja (AFREX)",
+      "\u20b927.81 LPA \u2014 A. Pujitha (Shinse)",
+      "\u20b927.79 LPA \u2014 Charlton Shallock (Tiger Machine)",
+      "\u20b926.31 LPA \u2014 G. Dhruvith (Nagano)",
+      "\u20b919.17 LPA \u2014 P. Renuka (Amazon)",
+      "\u20b918.10 LPA \u2014 K. Sumanth (Amazon)"
+    ],
+    "topRecruiters": [
+      "Capgemini",
+      "Accenture",
+      "Autodesk",
+      "Daiseki",
+      "Darwin",
+      "Hitachi",
+      "Ihara",
+      "Increff",
+      "Larsen & Toubro (L&T)",
+      "Sansyu",
+      "Toyota Connect",
+      "Walmart",
+      "Zopsmart",
+      "Amazon",
+      "Fabrantic",
+      "Pega",
+      "Oracle",
+      "Red Hat"
+    ],
+    "trainings": "Comprehensive placement training, coding bootcamps, aptitude, soft skills, and Japanese language programs."
+  },
+  "academicEcosystem": {
+    "ala": "Aditya Learning Academy (ALA) offering industry-oriented online certification courses.",
+    "agbi": "Aditya Global Business Incubator (AGBI) for student startups, hosting Google Startup Weekends & e-Weekends.",
+    "knimbus": "Knowledge Resource Center with Knimbus digital library portal (adityauniversity.knimbus.com).",
+    "internationalMoUs": [
+      "RWTH Aachen University (Germany)",
+      "Rowan University (USA)",
+      "IELTS Official Partner",
+      "Red Hat Academy",
+      "Oracle Academy",
+      "Pega University Program"
+    ]
+  }
+}
