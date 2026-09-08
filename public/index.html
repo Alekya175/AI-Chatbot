@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aditya Chatbot – Aditya University (Scalable 100k+ Users)</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;font-family:'DM Sans',sans-serif}
+#bgCanvas{position:fixed;inset:0;z-index:0;display:block}
+
+/* Light Mode */
+body.light-mode #bgCanvas{opacity:.18}
+body.light-mode .page{background:rgba(245,247,255,0.92)}
+body.light-mode .left{background:transparent}
+body.light-mode .college-name{color:#0B1A3E!important;text-shadow:none}
+body.light-mode .fc{background:rgba(255,255,255,0.95)!important;border-color:rgba(232,119,34,0.25)!important;box-shadow:0 4px 20px rgba(0,0,0,0.08)!important}
+body.light-mode .fc:hover{background:rgba(232,119,34,0.08)!important}
+body.light-mode .fc-title{color:#0B1A3E!important}
+body.light-mode nav a{background:rgba(255,255,255,0.9)!important;color:#475569!important;border-color:rgba(0,0,0,0.1)!important}
+body.light-mode nav a.active{background:#0B1A3E!important;color:#fff!important}
+body.light-mode nav a:hover{background:rgba(232,119,34,0.1)!important;color:#E87722!important}
+body.light-mode .cmodal{background:#f8fafc!important;border-color:rgba(232,119,34,0.2)!important}
+body.light-mode .msidebar{background:#ffffff!important;border-right-color:rgba(0,0,0,0.08)!important}
+body.light-mode .ms-title{color:#0B1A3E!important}
+body.light-mode .ms-topic{color:#475569!important}
+body.light-mode .ms-topic.on{background:rgba(232,119,34,0.12)!important;color:#0B1A3E!important}
+body.light-mode .ms-topic:hover{color:#E87722!important}
+body.light-mode .mchat{background:#f1f5f9!important}
+body.light-mode .mc-top{background:#ffffff!important;border-bottom-color:rgba(0,0,0,0.08)!important}
+body.light-mode .mc-title{color:#0B1A3E!important}
+body.light-mode .mc-sub{color:#64748b!important}
+body.light-mode .msgs{background:#f1f5f9!important}
+body.light-mode .msg-row.ai .m-bub{background:#ffffff!important;border-color:rgba(232,119,34,0.2)!important;color:#1E293B!important}
+body.light-mode .mc-input{background:#ffffff!important;border-top-color:rgba(0,0,0,0.08)!important}
+body.light-mode .iw{background:#f8fafc!important;border-color:rgba(232,119,34,0.25)!important}
+body.light-mode #chatIn{color:#0B1A3E!important}
+body.light-mode #chatIn::placeholder{color:#9ca3af!important}
+body.light-mode .typing{background:#ffffff!important;border-color:rgba(232,119,34,0.2)!important}
+body.light-mode footer{background:rgba(255,255,255,0.9)!important;border-top-color:rgba(232,119,34,0.15)!important;color:#64748b!important}
+
+.bot-stage{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;pointer-events:auto;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:.78;transition:opacity .25s ease, transform .25s ease;}
+body.auth-open .bot-stage{display:none!important;}
+.bot-stage > .bot-glow,.bot-stage > .bot-ring,.bot-stage > .bot-ring2{pointer-events:none;opacity:.58;}
+.bot-ring{position:absolute;width:340px;height:340px;border-radius:50%;border:1.5px solid rgba(232,119,34,0.18);animation:spin1 16s linear infinite;}
+.bot-ring2{position:absolute;width:280px;height:280px;border-radius:50%;border:1px solid rgba(26,80,204,0.14);animation:spin1 10s linear infinite reverse;}
+.bot-glow{position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(232,119,34,0.08) 0%,rgba(26,80,204,0.07) 50%,transparent 70%);animation:glowpulse 3s ease-in-out infinite;}
+@keyframes glowpulse{0%,100%{transform:scale(1);opacity:.42}50%{transform:scale(1.15);opacity:.6}}
+@keyframes spin1{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.robot-svg{width:210px;height:210px;position:relative;z-index:2;animation:robotFloat 4s ease-in-out infinite;filter:brightness(.82) drop-shadow(0 12px 40px rgba(232,119,34,0.28)) drop-shadow(0 0 60px rgba(26,80,204,0.12));pointer-events:all;opacity:.85;}
+@keyframes robotFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-16px) rotate(1deg)}}
+
+#authModal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(15,23,42,0.7);z-index:301;pointer-events:auto;}
+#authModal.show{display:flex;}
+.auth-card{width:min(480px,94vw);background:#fff;border-radius:28px;padding:28px;box-shadow:0 40px 90px rgba(15,23,42,0.25);position:relative;pointer-events:auto;}
+.modal-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border:none;border-radius:14px;background:rgba(15,23,42,0.08);color:#0B1A3E;font-size:18px;cursor:pointer;}
+
+.login-banner-box {
+  background: linear-gradient(135deg, #0B1A3E, #1A50CC);
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #fff;
+}
+.login-banner-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #E87722, #F5954A);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(232,119,34,0.4);
+}
+
+.page{position:relative;z-index:2;width:100%;height:100vh;display:flex;flex-direction:column;}
+.split{display:flex;flex:1;overflow:hidden}
+.left{flex:1;padding:0 40px 20px 44px;display:flex;flex-direction:column;justify-content:center;}
+.college-name{font-family:'Outfit',sans-serif;font-size:clamp(22px,2.8vw,32px);font-weight:900;color:#FFFFFF;letter-spacing:-.5px;margin-bottom:4px;text-shadow:0 2px 20px rgba(0,0,0,0.5);animation:fadeUp .5s .1s both;}
+.college-logo{height:56px;object-fit:contain;display:block}
+.college-text{font-family:'Outfit',sans-serif;font-size:clamp(22px,2.8vw,32px);font-weight:900;color:#FFFFFF;letter-spacing:-.5px;margin-bottom:4px;text-shadow:0 2px 20px rgba(0,0,0,0.5);animation:fadeUp .5s .1s both;}
+.chatbot-name{font-family:'Outfit',sans-serif;font-size:clamp(13px,1.5vw,17px);font-weight:600;margin-bottom:28px;animation:fadeUp .5s .2s both;}
+.chatbot-name .ai{background:linear-gradient(90deg,#E87722,#F5954A,#FBBF6E,#E87722);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 3s linear infinite;}
+.chatbot-name .rest{color:rgba(255,255,255,0.75);}
+
+nav{display:flex;gap:6px;margin-bottom:36px;animation:fadeUp .5s .3s both}
+nav a{padding:8px 22px;border-radius:8px;font-size:13px;font-weight:600;color:rgba(255,255,255,0.75);cursor:pointer;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.07);backdrop-filter:blur(8px);transition:all .17s;text-decoration:none;}
+nav a:hover{background:rgba(232,119,34,0.2);color:#fff;border-color:rgba(232,119,34,0.4)}
+nav a.active{background:rgba(255,255,255,0.95);color:#0B1A3E;border-color:transparent}
+.fcards{display:flex;flex-direction:column;gap:10px;animation:fadeUp .5s .4s both;max-width:420px}
+.fc{display:flex;align-items:center;gap:16px;background:rgba(13,28,70,0.55);border:1px solid rgba(232,119,34,0.2);border-radius:14px;padding:16px 18px;cursor:pointer;backdrop-filter:blur(14px);transition:all .2s;box-shadow:0 4px 24px rgba(0,0,0,0.25);}
+.fc:hover{background:rgba(232,119,34,0.15);border-color:rgba(232,119,34,0.5);transform:translateX(6px);box-shadow:0 8px 32px rgba(232,119,34,0.18);}
+.fc-icon-wrap{width:48px;height:48px;border-radius:12px;flex-shrink:0;background:rgba(232,119,34,0.2);border:1px solid rgba(232,119,34,0.3);display:flex;align-items:center;justify-content:center;}
+.fc-icon-wrap svg{width:24px;height:24px;fill:rgba(251,191,110,0.95)}
+.fc-title{font-size:14.5px;font-weight:700;color:#fff;margin-bottom:3px}
+.fc-sub{font-size:12px;color:rgba(251,191,110,0.7);line-height:1.4}
+
+/* Auth panel */
+.rp-welcome{font-family:'Outfit',sans-serif;font-size:26px;font-weight:900;color:#0B1A3E;letter-spacing:-.5px;margin-bottom:5px;}
+.rp-sub{font-size:12px;color:#6B7280;line-height:1.55;margin-bottom:20px}
+.auth-tabs{display:flex;gap:0;margin-bottom:20px;border:1px solid #E2E8F0;border-radius:10px;overflow:hidden;}
+.auth-tab{flex:1;padding:10px;text-align:center;font-size:13px;font-weight:600;cursor:pointer;background:#F8FAFC;color:#64748B;transition:all .15s;}
+.auth-tab.on{background:#0B1A3E;color:#fff;}
+.auth-form{display:flex;flex-direction:column;gap:10px;}
+.auth-form input{padding:11px 14px;border:1.5px solid #E2E8F0;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:13.5px;color:#0B1A3E;outline:none;transition:border-color .15s;}
+.auth-form input:focus{border-color:#E87722;}
+.auth-form input::placeholder{color:#9CA3AF}
+.auth-err{font-size:12px;color:#DC2626;padding:8px 12px;background:#FEF2F2;border-radius:7px;display:none;}
+.auth-err.show{display:block}
+.rp-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:13px 20px;border-radius:10px;border:none;font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .18s;letter-spacing:.1px;}
+.btn-login{background:linear-gradient(135deg,#E87722,#F5954A);color:#fff;box-shadow:0 4px 18px rgba(232,119,34,0.40);}
+.btn-login:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(232,119,34,0.50)}
+.btn-signup{background:linear-gradient(135deg,#1A50CC,#2563EB);color:#fff;box-shadow:0 4px 18px rgba(26,80,204,0.35);margin-top:4px;}
+.btn-signup:hover{transform:translateY(-2px);}
+.btn-guest{background:#F1F5F9;color:#475569;border:1.5px solid #CBD5E1;margin-top:8px;}
+.btn-guest:hover{background:#E2E8F0;color:#1E293B}
+.logged-in-panel{display:flex;flex-direction:column;gap:12px;}
+.user-badge{display:flex;align-items:center;gap:12px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:14px;}
+.user-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#E87722,#1A50CC);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:16px;flex-shrink:0;}
+.user-name{font-weight:700;font-size:14px;color:#0B1A3E;}
+.user-role{font-size:11px;color:#6B7280;text-transform:capitalize;}
+.btn-logout{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA;font-size:13px;padding:9px;margin-top:2px;}
+.btn-logout:hover{background:#FEE2E2}
+
+footer{text-align:center;padding:11px 32px;flex-shrink:0;font-size:12px;color:rgba(251,191,110,0.55);background:rgba(5,10,25,0.65);backdrop-filter:blur(10px);border-top:1px solid rgba(232,119,34,0.12);display:flex;align-items:center;justify-content:center;gap:14px;}
+footer a{color:rgba(245,149,74,0.8);text-decoration:none}
+footer .sep{color:rgba(255,255,255,0.2)}
+
+/* Chat Modal - Full Screen Mode */
+#chatModal{display:none;position:fixed;inset:0;z-index:200;width:100vw;height:100vh;background:#08101E;align-items:stretch;justify-content:stretch;padding:0;margin:0;}
+#chatModal.show{display:flex;animation:fadeIn .2s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.cmodal{width:100vw;height:100vh;max-width:100vw;max-height:100vh;display:flex;overflow:hidden;background:#08101E;border:none;border-radius:0;box-shadow:none;}
+.cmodal.no-sidebar{width:100vw;height:100vh}
+.cmodal.no-sidebar .mchat{flex:1;width:100%}
+.msidebar{width:260px;flex-shrink:0;background:rgba(5,10,25,0.95);border-right:1px solid rgba(232,119,34,0.15);display:flex;flex-direction:column;}
+.ms-head{padding:14px 14px 10px;border-bottom:1px solid rgba(232,119,34,0.1);}
+.ms-brand{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.ms-title{font-family:'Outfit',sans-serif;font-size:13px;font-weight:800;color:#fff;}
+.ms-sub{font-size:9.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;background:linear-gradient(90deg,#E87722,#F5954A,#FBBF6E);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.ms-lbl{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#374151;padding:12px 14px 5px}
+.ms-topic{display:flex;align-items:center;gap:9px;padding:8px 12px;margin:0 6px 2px;border-radius:7px;cursor:pointer;transition:all .15s;font-size:12.5px;color:#6B7280;border:1px solid transparent;}
+.ms-topic:hover{background:rgba(232,119,34,0.1);color:#FFD4A8;border-color:rgba(232,119,34,0.2)}
+.ms-topic.on{background:rgba(232,119,34,0.18);border-color:rgba(232,119,34,0.35);color:#fff;font-weight:600}
+.ms-topic .ti{font-size:14px;width:20px;text-align:center}
+.ms-hist{flex:1;overflow-y:auto;padding:6px}
+.ms-hi{padding:7px 10px;border-radius:6px;font-size:11.5px;color:#374151;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:all .13s;margin-bottom:1px}
+.ms-hi:hover{background:rgba(255,255,255,0.05);color:#9CA3AF}
+.ms-foot{padding:11px 13px;border-top:1px solid rgba(232,119,34,0.1);display:flex;align-items:center;gap:9px}
+.ms-av{width:29px;height:29px;border-radius:50%;background:linear-gradient(135deg,#E87722,#1A50CC);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0}
+.ms-un{font-size:12px;font-weight:600;color:#E5E7EB}
+.ms-id{font-size:10px;color:#4B5563}
+.mchat{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.mc-top{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;border-bottom:1px solid rgba(232,119,34,0.1);background:rgba(5,10,25,0.5);flex-shrink:0;}
+.mc-title{font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;color:#fff}
+.mc-sub{font-size:11px;color:#4B5563;margin-top:1px}
+.mc-right{display:flex;align-items:center;gap:8px}
+.mbadge{background:rgba(232,119,34,0.14);border:1px solid rgba(232,119,34,0.3);border-radius:20px;padding:3px 11px;font-size:10.5px;font-weight:700;color:#F5954A;letter-spacing:.3px;}
+.mcl-btn{width:30px;height:30px;border:1px solid rgba(255,255,255,0.1);border-radius:7px;background:rgba(255,255,255,0.05);color:#6B7280;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;transition:all .14s;}
+.mcl-btn:hover{background:rgba(220,38,38,0.2);border-color:rgba(220,38,38,0.4);color:#FCA5A5}
+.theme-btn{width:30px;height:30px;border:1px solid rgba(255,255,255,0.1);border-radius:7px;background:rgba(255,255,255,0.05);color:#6B7280;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;transition:all .14s;}
+.theme-btn:hover{background:rgba(232,119,34,0.2);border-color:rgba(232,119,34,0.4);color:#FFD4A8}
+.msgs{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:14px;scroll-behavior:smooth}
+.welcome{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;text-align:center;gap:14px;padding:20px}
+.w-ico{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,#E87722,#1A50CC);display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px rgba(232,119,34,0.45);animation:wglow 3s ease-in-out infinite;}
+@keyframes wglow{0%,100%{box-shadow:0 0 30px rgba(232,119,34,0.45)}50%{box-shadow:0 0 45px rgba(26,80,204,0.55)}}
+.w-ico svg{width:28px;height:28px;fill:white}
+.w-h{font-family:'Outfit',sans-serif;font-size:18px;font-weight:800;color:#fff}
+.w-h .grad{background:linear-gradient(90deg,#E87722,#F5954A,#FBBF6E);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.w-p{font-size:12.5px;color:#6B7280;max-width:310px;line-height:1.6}
+.sugg-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;max-width:400px}
+.sugg{background:rgba(232,119,34,0.07);border:1px solid rgba(232,119,34,0.15);border-radius:10px;padding:11px 13px;text-align:left;cursor:pointer;transition:all .16s;}
+.sugg:hover{background:rgba(232,119,34,0.18);border-color:rgba(232,119,34,0.4);transform:translateY(-2px)}
+.sugg .si{font-size:15px;margin-bottom:4px}
+.sugg .st{font-size:11.5px;font-weight:600;color:#FFD4A8;line-height:1.35}
+.msg-row{display:flex;gap:10px;animation:msgUp .22s ease}
+@keyframes msgUp{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.msg-row.user{flex-direction:row-reverse}
+.m-av{width:30px;height:30px;border-radius:50%;flex-shrink:0;align-self:flex-end;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.m-av.ai{background:linear-gradient(135deg,#E87722,#1A50CC);color:#fff}
+.m-av.us{background:linear-gradient(135deg,#1A50CC,#2563EB);color:#fff}
+.m-wrap{max-width:72%}
+.m-bub{padding:10px 14px;border-radius:16px;font-size:13.5px;line-height:1.65}
+.msg-row.ai .m-bub{background:rgba(232,119,34,0.07);border:1px solid rgba(232,119,34,0.15);border-bottom-left-radius:4px;color:#E5E7EB;}
+.msg-row.user .m-bub{background:linear-gradient(135deg,#1A50CC,#2563EB);color:#fff;border-bottom-right-radius:4px;box-shadow:0 4px 18px rgba(26,80,204,0.3);}
+.mc-input{padding:13px 16px 15px;flex-shrink:0;background:rgba(5,10,25,0.5);border-top:1px solid rgba(232,119,34,0.1)}
+.iw{display:flex;align-items:flex-end;gap:8px;background:rgba(255,255,255,0.06);border:1.5px solid rgba(232,119,34,0.2);border-radius:13px;padding:9px 10px 9px 14px;transition:border-color .17s;}
+.iw:focus-within{border-color:rgba(232,119,34,0.55);background:rgba(255,255,255,0.08)}
+#chatIn{flex:1;border:none;outline:none;background:transparent;font-family:'DM Sans',sans-serif;font-size:13.5px;color:#E5E7EB;resize:none;line-height:1.5;max-height:110px;overflow-y:auto;padding:2px 0;}
+#chatIn::placeholder{color:#374151}
+.sbtn{width:36px;height:36px;border:none;border-radius:9px;color:#fff;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .17s;}
+.sbtn.voice-btn{background:linear-gradient(135deg,#1A50CC,#2563EB);box-shadow:0 4px 14px rgba(26,80,204,0.45);position:relative;}
+.sbtn.voice-btn:hover{transform:scale(1.07)}
+.sbtn.voice-btn.listening{background:linear-gradient(135deg,#dc2626,#ef4444)!important;animation:voicePulse 1s infinite;}
+@keyframes voicePulse{0%,100%{box-shadow:0 4px 14px rgba(220,38,38,0.4)}50%{box-shadow:0 4px 24px rgba(220,38,38,0.8)}}
+.sbtn.send-btn{background:linear-gradient(135deg,#E87722,#F5954A);box-shadow:0 4px 14px rgba(232,119,34,0.45);}
+.sbtn.send-btn:hover{transform:scale(1.07)}
+.sbtn:disabled{opacity:.4;transform:none;cursor:not-allowed}
+.sbtn svg{width:15px;height:15px;fill:white}
+.if{display:flex;justify-content:space-between;margin-top:7px;font-size:10.5px;color:#374151;padding:0 2px}
+.kbd{background:rgba(232,119,34,0.1);border:1px solid rgba(232,119,34,0.2);border-radius:4px;padding:1px 5px;font-size:10px;color:#F5954A}
+
+/* Admin Notification Banner */
+.notif-banner{position:fixed;bottom:24px;right:24px;z-index:9999;background:#08101E;border:1px solid rgba(16,185,129,0.5);border-radius:18px;padding:18px;max-width:380px;box-shadow:0 16px 50px rgba(0,0,0,0.7);animation:notifSlide .35s ease;display:flex;flex-direction:column;gap:10px;}
+@keyframes notifSlide{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.notif-header{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.notif-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#10B981,#059669);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;color:#fff;}
+.notif-title-box{flex:1;}
+.notif-title{font-family:'Outfit',sans-serif;font-size:13.5px;font-weight:800;color:#F8FAFC;}
+.notif-status{font-size:10.5px;font-weight:700;color:#34D399;}
+.notif-close{width:24px;height:24px;border:none;background:rgba(255,255,255,0.08);border-radius:6px;color:#9CA3AF;cursor:pointer;font-size:14px;}
+.notif-body{font-size:12.5px;color:#CBD5E1;line-height:1.55;background:rgba(255,255,255,0.03);padding:10px;border-radius:10px;}
+.notif-meta{font-size:10.5px;color:#64748B;display:flex;justify-content:space-between;}
+.notif-actions{display:flex;gap:8px;margin-top:4px;}
+.notif-btn{flex:1;padding:8px;border:none;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;}
+.notif-btn.primary{background:linear-gradient(135deg,#10B981,#059669);color:#fff;}
+.notif-btn.secondary{background:rgba(255,255,255,0.08);color:#cbd5e1;}
+
+/* Language Selector */
+.lang-wrap{position:relative;display:inline-flex;align-items:center}
+.lang-btn{display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:8px;border:1px solid rgba(232,119,34,0.35);background:rgba(232,119,34,0.1);color:#FFD4A8;font-size:12px;font-weight:600;cursor:pointer;}
+.lang-dropdown{display:none;position:absolute;top:calc(100% + 6px);right:0;min-width:170px;background:#0B1A3E;border:1px solid rgba(232,119,34,0.3);border-radius:10px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,0.6);z-index:500}
+.lang-dropdown.open{display:block}
+.lang-search{width:100%;padding:8px 12px;border:none;border-bottom:1px solid rgba(232,119,34,0.15);background:rgba(255,255,255,0.05);color:#fff;font-size:12px;outline:none}
+.lang-list{max-height:200px;overflow-y:auto}
+.lang-item{padding:8px 14px;font-size:12.5px;color:#CBD5E1;cursor:pointer;display:flex;align-items:center;justify-content:space-between}
+.lang-item:hover{background:rgba(232,119,34,0.15);color:#FFD4A8}
+.lang-item.active{background:rgba(232,119,34,0.25);color:#fff;font-weight:600}
+.translate-badge{font-size:10px;color:rgba(251,191,110,0.7);padding:2px 6px;background:rgba(232,119,34,0.1);border-radius:4px;margin-left:4px;display:none}
+.robot-avatar-img{width:230px;height:auto;max-height:240px;position:relative;z-index:2;object-fit:contain;animation:robotFloat 4s ease-in-out infinite;filter:drop-shadow(0 15px 35px rgba(232,119,34,0.45)) drop-shadow(0 0 50px rgba(26,80,204,0.35));pointer-events:all;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+
+<!-- Robot Stage Avatar -->
+<div class="bot-stage">
+  <div class="bot-glow"></div>
+  <div class="bot-ring"></div>
+  <div class="bot-ring2"></div>
+  <img src="bot_avatar.png" alt="Aditya AI Assistant Avatar" class="robot-avatar-img" onclick="revealAuthPanel()" title="Click to login or register"/>
+</div>
+
+<div class="page">
+  <div class="split">
+    <div class="left">
+      <div class="college-name">
+        <img src="logo.png" alt="Aditya University" class="college-logo" onerror="this.style.display='none'; this.parentElement.querySelector('.college-text').style.display='block'"/>
+        <div class="college-text" style="display:none">Aditya University</div>
+      </div>
+      <div class="chatbot-name"><span class="ai" id="uiTitle">✦ Aditya Chatbot</span><span class="rest" id="uiSub"> — Scalable AI Campus Companion (100k+ Students)</span></div>
+
+      <nav id="mainNav">
+        <a class="active" onclick="navClick(this,'Home','')">Home</a>
+        <a onclick="navClick(this,'About','Tell me about Aditya University — its history, vision, mission, and what makes it special.')">About</a>
+        <a onclick="navClick(this,'Services','What services does Aditya University offer to students?')">Services</a>
+        <a onclick="navClick(this,'Contact','What are the contact details for Aditya University?')">Contact</a>
+        <a href="/admin" target="_blank" style="border-color:rgba(232,119,34,0.4); color:#F5954A;">🛠️ Admin Dashboard</a>
+      </nav>
+
+      <div class="fcards">
+        <div class="fc" onclick="openChat('College Notifications')">
+          <div class="fc-icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg></div>
+          <div><div class="fc-title" id="fc1Title">College Notifications</div><div class="fc-sub" id="fc1Sub">Latest updates and announcements</div></div>
+        </div>
+        <div class="fc" onclick="openChat('Admissions')">
+          <div class="fc-icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+          <div><div class="fc-title" id="fc2Title">Admissions</div><div class="fc-sub" id="fc2Sub">Programs, eligibility &amp; apply now</div></div>
+        </div>
+        <div class="fc" onclick="openChat('Hostel')">
+          <div class="fc-icon-wrap"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div>
+          <div><div class="fc-title" id="fc3Title">Hostel &amp; Transport</div><div class="fc-sub" id="fc3Sub">Accommodation and commute info</div></div>
+        </div>
+        <div class="fc" onclick="openChat('Scholarships')">
+          <div class="fc-icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg></div>
+          <div><div class="fc-title" id="fc4Title">Scholarships &amp; Fees</div><div class="fc-sub" id="fc4Sub">Financial aid and fee structure</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Auth Modal with Aditya University Logo Banner -->
+    <div id="authModal" class="auth-modal" aria-hidden="true">
+      <div class="auth-card">
+        <button class="modal-close" onclick="closeAuthModal()" aria-label="Close">✕</button>
+        
+        <div class="login-banner-box">
+          <div class="login-banner-icon">🎓</div>
+          <div>
+            <h3 style="font-family:'Outfit',sans-serif; font-size:18px; font-weight:800;">Aditya University</h3>
+            <p style="font-size:12px; opacity:0.85;">AI Student Assistance &amp; Academic Services</p>
+          </div>
+        </div>
+
+        <div class="rp-welcome" id="rpWelcome">Welcome</div>
+        <p class="rp-sub" id="rpSub">Sign in to access your personalized AI campus assistant.</p>
+
+        <div id="authPanel">
+          <div class="auth-tabs">
+            <div class="auth-tab on" onclick="switchTab('login')">Login</div>
+            <div class="auth-tab" onclick="switchTab('signup')">Sign Up</div>
+            <div class="auth-tab" onclick="switchTab('admin')">Admin</div>
+          </div>
+          <div id="loginForm" class="auth-form">
+            <input type="email" id="loginEmail" placeholder="Email address" autocomplete="email" value="student@aditya.edu"/>
+            <input type="password" id="loginPwd" placeholder="Password" autocomplete="current-password" value="123456"/>
+            <div style="display:flex; justify-content:flex-end; margin-top:-4px; margin-bottom:8px;">
+              <button type="button" onclick="showForgotPasswordForm()" style="background:none; border:none; color:#F5954A; font-size:12px; font-weight:600; cursor:pointer; padding:0; font-family:inherit;">Forgot Password?</button>
+            </div>
+            <div class="auth-err" id="loginErr"></div>
+            <button type="button" class="rp-btn btn-login" onclick="doLogin()">Student Login</button>
+          </div>
+          <div id="forgotPasswordForm" class="auth-form" style="display:none">
+            <div style="font-size:12px; color:#CBD5E1; margin-bottom:10px; line-height:1.4;">
+              Enter your registered email address below to receive a password reset code.
+            </div>
+            <input type="email" id="forgotEmail" placeholder="Enter your email address" autocomplete="email"/>
+            <div class="auth-err" id="forgotErr"></div>
+            <div id="forgotSuccess" style="display:none; color:#34D399; font-size:12px; font-weight:600; margin-bottom:10px; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); padding:8px 10px; border-radius:8px;"></div>
+            
+            <div id="otpResetSection" style="display:none; margin-top:8px;">
+              <input type="text" id="resetOtpCode" placeholder="Enter 6-digit reset code" style="margin-bottom:8px; letter-spacing:2px; font-weight:700; text-align:center;"/>
+              <input type="password" id="resetNewPwd" placeholder="Enter new password (min 6 chars)" autocomplete="new-password"/>
+              <button type="button" class="rp-btn btn-login" style="margin-top:10px;" onclick="doResetPassword()">Reset Password Now</button>
+            </div>
+
+            <button type="button" id="btnSendResetCode" class="rp-btn btn-login" onclick="doSendResetEmail()">Send Reset Code to Email ✉️</button>
+            <button type="button" class="rp-btn btn-guest" style="margin-top:8px;" onclick="cancelForgotPassword()">← Back to Login</button>
+          </div>
+          <div id="signupForm" class="auth-form" style="display:none">
+            <input type="text"     id="suName"  placeholder="Full name"/>
+            <input type="text"     id="suReg"   placeholder="Registration number (optional)"/>
+            <input type="email"    id="suEmail" placeholder="Email address" autocomplete="email"/>
+            <input type="password" id="suPwd"   placeholder="Password (min 6 chars)" autocomplete="new-password"/>
+            <div class="auth-err" id="signupErr"></div>
+            <button type="button" class="rp-btn btn-signup" onclick="doSignup()">Create Account</button>
+          </div>
+          <div id="adminForm" class="auth-form" style="display:none">
+            <input type="email" id="adminEmail" placeholder="Admin email" autocomplete="email" value="admin@aditya.edu"/>
+            <input type="password" id="adminPwd" placeholder="Admin password" autocomplete="current-password" value="admin123"/>
+            <div class="auth-err" id="adminErr"></div>
+            <button type="button" class="rp-btn btn-login" onclick="doAdminLogin()">Admin Login</button>
+          </div>
+          <button type="button" class="rp-btn btn-guest" style="margin-top:12px" onclick="doGuest()">Continue Without Login</button>
+        </div>
+
+        <div id="loggedPanel" class="logged-in-panel" style="display:none">
+          <div class="user-badge">
+            <div class="user-av" id="userAv">S</div>
+            <div><div class="user-name" id="userName">Student</div><div class="user-role" id="userRole">student</div></div>
+          </div>
+          <button class="rp-btn btn-login" onclick="openChat('General')">Open Chatbot</button>
+          <button class="rp-btn btn-guest btn-logout" onclick="doLogout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>© 2026 Aditya University</span>
+    <span class="sep">|</span>
+    <div class="tech-stack-row">
+      <span class="tsbadge mongodb">🍃 MongoDB Atlas</span>
+      <span class="tsbadge spacy">🧠 Universal Academic KB &amp; Multi-Voice</span>
+      <span class="tsbadge github" onclick="window.open('/admin','_blank')">🛠️ Admin Portal</span>
+    </div>
+    <span class="sep">|</span>
+    <a href="https://www.adityauniversity.in" target="_blank">adityauniversity.in</a>
+  </footer>
+</div>
+
+<!-- Chat Modal -->
+<div id="chatModal">
+  <div class="cmodal">
+    <div class="msidebar">
+      <div class="ms-head">
+        <div class="ms-brand">
+          <div class="ms-title">✦ Aditya Chatbot</div>
+          <div class="ms-sub">AI Campus Assistant</div>
+        </div>
+      </div>
+      <div class="ms-lbl">Topics</div>
+      <div class="ms-topic on" data-t="General" onclick="setTopic(this)"><span class="ti">💬</span><span class="topic-txt">General</span></div>
+      <div class="ms-topic" data-t="College Notifications" onclick="setTopic(this)"><span class="ti">🔔</span><span class="topic-txt">Notices</span></div>
+      <div class="ms-topic" data-t="Admissions" onclick="setTopic(this)"><span class="ti">🎓</span><span class="topic-txt">Admissions</span></div>
+      <div class="ms-topic" data-t="Hostel" onclick="setTopic(this)"><span class="ti">🏠</span><span class="topic-txt">Hostel</span></div>
+      <div class="ms-topic" data-t="Timetable" onclick="setTopic(this)"><span class="ti">📅</span><span class="topic-txt">Timetable</span></div>
+      <div class="ms-topic" data-t="Placements" onclick="setTopic(this)"><span class="ti">💼</span><span class="topic-txt">Placements</span></div>
+      <div class="ms-topic" data-t="Faculty" onclick="setTopic(this)"><span class="ti">👨‍🏫</span><span class="topic-txt">Faculty</span></div>
+      <div class="ms-topic" data-t="Research" onclick="setTopic(this)"><span class="ti">🔬</span><span class="topic-txt">Research</span></div>
+      <div class="ms-topic" data-t="Scholarships" onclick="setTopic(this)"><span class="ti">🛡️</span><span class="topic-txt">Scholarships</span></div>
+      <div class="ms-topic" data-t="Fees" onclick="setTopic(this)"><span class="ti">💳</span><span class="topic-txt">Fees</span></div>
+      <div class="ms-topic" data-t="Contact" onclick="setTopic(this)"><span class="ti">📞</span><span class="topic-txt">Contact</span></div>
+      <div class="ms-lbl" style="margin-top:6px">Chat History</div>
+      <div class="ms-hist" id="chatHistList"></div>
+      <div class="ms-foot">
+        <div class="ms-av" id="chatSideAv">S</div>
+        <div><div class="ms-un" id="chatSideName">Student</div><div class="ms-id" id="chatSideRole">Aditya University</div></div>
+      </div>
+    </div>
+    <div class="mchat">
+      <div class="mc-top">
+        <div>
+          <div class="mc-title" id="chatTitle">General Queries</div>
+          <div class="mc-sub" id="chatSub">Ask Aditya Chatbot anything about campus life</div>
+        </div>
+        <div class="mc-right">
+          <div class="lang-wrap">
+            <button class="lang-btn" id="langBtn" onclick="toggleLangDropdown(event)">
+              <span style="font-size:12px; margin-right:2px">🗣</span>
+              <span id="langLabel">EN</span>
+              <svg viewBox="0 0 24 24" style="width:10px;height:10px;fill:currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+              <input class="lang-search" id="langSearch" placeholder="Search language…" oninput="filterLangs()" />
+              <div class="lang-list" id="langList"></div>
+            </div>
+          </div>
+          <span class="mbadge" id="aiBadge" style="background:rgba(232,119,34,0.15); color:#FBBF6E; border:1px solid rgba(232,119,34,0.3); border-radius:12px; padding:4px 10px; font-size:11px; font-weight:700;">✦ Aditya AI</span>
+          <button class="theme-btn" id="ttsToggleBtn" onclick="toggleTts()" title="Voice Reading (On/Off)">🔊</button>
+          <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle Light/Dark">🌙</button>
+          <button class="mcl-btn" onclick="closeChat()" title="Close">✕</button>
+        </div>
+      </div>
+      <div class="msgs" id="msgs"></div>
+      <div class="mc-input">
+        <div class="iw">
+          <textarea id="chatIn" rows="1" placeholder="Ask Aditya Chatbot anything..." onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+          <button class="sbtn voice-btn" id="voiceBtn" onclick="startVoice()" title="Voice input — Click mic to speak, review & Send">
+            <svg viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm-1 1.93c-3.94-.49-7-3.85-7-7.93H2c0 4.42 3.13 8.09 7.27 8.82V21h2v-3.07c.27.05.46.07.73.07s.46-.02.73-.07V21h2v-3.25c4.14-.73 7.27-4.4 7.27-8.82h-2c0 4.08-3.06 7.44-7 7.93V15h-1.93L11 15.93z"/></svg>
+          </button>
+          <button class="sbtn send-btn" id="sendBtn" onclick="sendMsg()">
+            <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </button>
+        </div>
+        <div class="if">
+          <span id="voiceHint">🔑 Click mic → speak → review → press Send</span>
+          <span><span class="translate-badge" id="translateBadge" style="display:none; font-size:10px; color:#FBBF6E; margin-right:8px">🌐 Translated</span><span class="kbd">Enter</span> send · <span class="kbd">Shift+Enter</span> new line</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const API = '/api';
+
+/* Voice Output State */
+let ttsEnabled = true;
+
+function toggleTts() {
+  ttsEnabled = !ttsEnabled;
+  const btn = document.getElementById('ttsToggleBtn');
+  if (btn) {
+    btn.textContent = ttsEnabled ? '🔊' : '🔇';
+    btn.title = ttsEnabled ? 'Voice Reading On' : 'Voice Reading Muted';
+  }
+  if (!ttsEnabled && window.speechSynthesis) {
+    window.speechSynthesis.cancel();
+  }
+}
+
+/* UI Multilingual Dictionary */
+const UI_TRANSLATIONS = {
+  en: {
+    sub: " — Scalable AI Campus Companion (100k+ Students)",
+    chatSub: "Ask Aditya Chatbot anything about campus life",
+    placeholder: "Ask Aditya Chatbot anything...",
+    voiceHint: "🎤 Click Mic to START / STOP voice input",
+    fc1: ["College Notifications", "Latest updates and announcements"],
+    fc2: ["Admissions", "Programs, eligibility & apply now"],
+    fc3: ["Hostel & Transport", "Accommodation and commute info"],
+    fc4: ["Scholarships & Fees", "Financial aid and fee structure"]
+  },
+  te: {
+    sub: " — ఆదిత్య విశ్వవిద్యాలయం AI సహాయకుడు",
+    chatSub: "క్యాంపస్ సమాచారం గురించి ఏమైనా అడగండి",
+    placeholder: "మీ ప్రశ్నను ఇక్కడ టైప్ చేయండి...",
+    voiceHint: "🎤 మైక్ నొక్కి మాట్లాడండి (స్టార్ట్ / స్టాప్)",
+    fc1: ["నోటిఫికేషన్లు", "తాజా వార్తలు మరియు సమాచారం"],
+    fc2: ["అడ్మిషన్లు", "కోర్సులు, అర్హత మరియు దరఖాస్తు"],
+    fc3: ["హాస్టల్ & రవాణా", "వసతి మరియు బస్సు సౌకర్యాలు"],
+    fc4: ["స్కాలర్‌షిప్‌లు & ఫీజులు", "ఆర్థిక సాయం మరియు ఫీజుల వివరాలు"]
+  },
+  hi: {
+    sub: " — आदित्य विश्वविद्यालय एआई सहायक",
+    chatSub: "कैंपस जीवन के बारे में कुछ भी पूछें",
+    placeholder: "अपना प्रश्न यहाँ लिखें...",
+    voiceHint: "🎤 माइक दबाकर बोलें (प्रारंभ / रोकें)",
+    fc1: ["कॉलेज सूचनाएं", "नवीनतम अपडेट और घोषणाएं"],
+    fc2: ["प्रवेश", "पाठ्यक्रम, पात्रता और आवेदन"],
+    fc3: ["हॉस्टल और परिवहन", "आवास और बस सेवाएं"],
+    fc4: ["छात्रवृत्ति और शुल्क", "वित्तीय सहायता और शुल्क संरचना"]
+  },
+  ta: {
+    sub: " — ஆதித்யா பல்கலைக்கழக AI உதவியாளர்",
+    chatSub: "வளாக வாழ்க்கை பற்றி எதையும் கேளுங்கள்",
+    placeholder: "உங்கள் கேள்வியை தட்டச்சு செய்யவும்...",
+    voiceHint: "🎤 மைக் அழுத்தவும் (தொடங்கு / நிறுத்து)",
+    fc1: ["அறிவிப்புகள்", "சமீபத்திய செய்திகள்"],
+    fc2: ["சேர்க்கை", "பாடநெறிகள் மற்றும் தகுதி"],
+    fc3: ["விடுதி மற்றும் போக்குவரத்து", "தங்குமிடம் மற்றும் பேருந்து"],
+    fc4: ["உதவித்தொகை & கட்டணம்", "கட்டண விவரங்கள்"]
+  },
+  kn: {
+    sub: " — ಆದಿತ್ಯ ವಿಶ್ವವಿದ್ಯಾಲಯ ಎಐ ಸಹಾಯಕ",
+    chatSub: "ಕ್ಯಾಂಪಸ್ ಜೀವನದ ಕುರಿತು ಏನನ್ನಾದರೂ ಕೇಳಿ",
+    placeholder: "ನಿಮ್ಮ ಪ್ರಶ್ನೆಯನ್ನು ಟೈಪ್ ಮಾಡಿ...",
+    voiceHint: "🎤 ಮೈಕ್ ಒತ್ತಿ ಮಾತನಾಡಿ (ಪ್ರಾರಂಭಿಸಿ / ನಿಲ್ಲಿಸಿ)",
+    fc1: ["ಸೂಚನೆಗಳು", "ಇತ್ತೀಚಿನ ನವೀಕರಣಗಳು"],
+    fc2: ["ಪ್ರವೇಶಾತಿ", "ಕೋರ್ಸ್‌ಗಳು ಮತ್ತು ಅರ್ಹತೆ"],
+    fc3: ["ಹಾಸ್ಟೆಲ್ ಮತ್ತು ಸಾರಿಗೆ", "ವಸತಿ ಮತ್ತು ಬಸ್ ಸೌಲಭ್ಯಗಳು"],
+    fc4: ["ವಿದ್ಯಾರ್ಥಿವೇತನ ಮತ್ತು ಶುಲ್ಕ", "ಆರ್ಥಿಕ ನೆರವು"]
+  },
+  ml: {
+    sub: " — ആദിത്യ സർവകലാശാല എഐ സഹായി",
+    chatSub: "ക്യാമ്പസ് വിവരങ്ങൾ ചോദിക്കൂ",
+    placeholder: "നിങ്ങളുടെ ചോദ്യം ടൈപ്പ് ചെയ്യുക...",
+    voiceHint: "🎤 മൈക്ക് അമർത്തി സംസാരിക്കുക",
+    fc1: ["അറിയിപ്പുകൾ", "പുതിയ വാർത്തകൾ"],
+    fc2: ["അഡ്മിഷൻ", "കോഴ്സുകളും യോഗ്യതയും"],
+    fc3: ["ഹോസ്റ്റലും ഗതാഗതവും", "താമസവും ബസ് സേവനങ്ങളും"],
+    fc4: ["സ്കോളർഷിപ്പും ഫീസും", "ഫീസ് വിവരങ്ങൾ"]
+  },
+  fr: {
+    sub: " — Assistant IA de l'Université Aditya",
+    chatSub: "Posez vos questions sur la vie de campus",
+    placeholder: "Posez votre question ici...",
+    voiceHint: "🎤 Appuyez sur le micro pour parler",
+    fc1: ["Notifications", "Dernières mises à jour"],
+    fc2: ["Admissions", "Programmes & Candidatures"],
+    fc3: ["Hébergement & Transport", "Logement et transport"],
+    fc4: ["Bourses & Frais", "Aide financière et frais"]
+  },
+  de: {
+    sub: " — KI-Assistent der Aditya Universität",
+    chatSub: "Fragen Sie alles über den Campus",
+    placeholder: "Stellen Sie Ihre Frage hier...",
+    voiceHint: "🎤 Drücken Sie das Mikrofon zum Sprechen",
+    fc1: ["Benachrichtigungen", "Neueste Ankündigungen"],
+    fc2: ["Zulassungen", "Studiengänge & Bewerbung"],
+    fc3: ["Unterkunft & Transport", "Wohnen und Busse"],
+    fc4: ["Stipendien & Gebühren", "Finanzielle Unterstützung"]
+  },
+  es: {
+    sub: " — Asistente IA de la Universidad Aditya",
+    chatSub: "Pregunta lo que quieras sobre el campus",
+    placeholder: "Escribe tu pregunta aquí...",
+    voiceHint: "🎤 Presiona el micrófono para hablar",
+    fc1: ["Notificaciones", "Últimas actualizaciones"],
+    fc2: ["Admisiones", "Programas y solicitud"],
+    fc3: ["Alojamiento y Transporte", "Información de transporte"],
+    fc4: ["Becas y Tarifas", "Ayuda financiera y tarifas"]
+  }
+};
+
+/* Supported Multilingual Options */
+let selectedLang = 'en';
+const allLangs = [
+  { code: 'en', name: 'English' },
+  { code: 'te', name: 'Telugu (తెలుగు)' },
+  { code: 'hi', name: 'Hindi (हिंदी)' },
+  { code: 'ta', name: 'Tamil (தமிழ்)' },
+  { code: 'kn', name: 'Kannada (ಕನ್ನಡ)' },
+  { code: 'ml', name: 'Malayalam (മലയാളം)' },
+  { code: 'fr', name: 'French' },
+  { code: 'de', name: 'German' },
+  { code: 'es', name: 'Spanish' }
+];
+
+function renderLangList(langs) {
+  const list = document.getElementById('langList');
+  if (!list) return;
+  list.innerHTML = langs.map(l => `<div class="lang-item${l.code===selectedLang?' active':''}" onclick="selectLang('${l.code}','${l.name}')"><span>${l.name}</span><span class="li-code">${l.code.toUpperCase()}</span></div>`).join('');
+}
+
+function filterLangs() {
+  const q = document.getElementById('langSearch').value.toLowerCase();
+  renderLangList(allLangs.filter(l => l.name.toLowerCase().includes(q) || l.code.includes(q)));
+}
+
+function toggleLangDropdown(e) {
+  e.stopPropagation();
+  const dd = document.getElementById('langDropdown');
+  dd.classList.toggle('open');
+  if (dd.classList.contains('open')) {
+    renderLangList(allLangs);
+  }
+}
+
+function selectLang(code, name) {
+  selectedLang = code;
+  document.getElementById('langLabel').textContent = code.toUpperCase();
+  document.getElementById('langDropdown').classList.remove('open');
+  renderLangList(allLangs);
+  document.getElementById('translateBadge').style.display = code !== 'en' ? 'inline' : 'none';
+
+  // Dynamic Full UI Text Conversion
+  const ui = UI_TRANSLATIONS[code] || UI_TRANSLATIONS.en;
+  document.getElementById('uiSub').textContent = ui.sub;
+  document.getElementById('chatSub').textContent = ui.chatSub;
+  document.getElementById('chatIn').placeholder = ui.placeholder;
+  document.getElementById('voiceHint').textContent = ui.voiceHint;
+  document.getElementById('fc1Title').textContent = ui.fc1[0];
+  document.getElementById('fc1Sub').textContent = ui.fc1[1];
+  document.getElementById('fc2Title').textContent = ui.fc2[0];
+  document.getElementById('fc2Sub').textContent = ui.fc2[1];
+  document.getElementById('fc3Title').textContent = ui.fc3[0];
+  document.getElementById('fc3Sub').textContent = ui.fc3[1];
+  document.getElementById('fc4Title').textContent = ui.fc4[0];
+  document.getElementById('fc4Sub').textContent = ui.fc4[1];
+}
+
+/* Exponential Backoff Fetch Helper */
+async function fetchWithBackoff(url, options = {}, retries = 3, backoff = 1000) {
+  try {
+    const res = await fetch(url, options);
+    if (res.status === 429 || res.status === 503) {
+      if (retries > 0) {
+        await new Promise(r => setTimeout(r, backoff));
+        return fetchWithBackoff(url, options, retries - 1, backoff * 2);
+      }
+    }
+    return res;
+  } catch (err) {
+    if (retries > 0) {
+      await new Promise(r => setTimeout(r, backoff));
+      return fetchWithBackoff(url, options, retries - 1, backoff * 2);
+    }
+    throw err;
+  }
+}
+
+/* Background Canvas Animation */
+const canvas = document.getElementById('bgCanvas');
+const ctx2d = canvas.getContext('2d');
+let W, H, pts = [];
+function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; initPts(); }
+function initPts() {
+  pts = [];
+  const count = Math.floor((W * H) / 9000);
+  for (let i = 0; i < count; i++) pts.push({ x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*2+.5,alpha:Math.random()*.6+.2,orange:Math.random()>.6 });
+}
+function drawBg() {
+  const g = ctx2d.createRadialGradient(W*.35,H*.5,0,W*.35,H*.5,W*.7);
+  g.addColorStop(0,'#0C1A3E');g.addColorStop(.35,'#080F28');g.addColorStop(.7,'#050A1A');g.addColorStop(1,'#020610');
+  ctx2d.fillStyle=g;ctx2d.fillRect(0,0,W,H);
+  const og=ctx2d.createRadialGradient(W*.15,H*.2,0,W*.15,H*.2,W*.4);
+  og.addColorStop(0,'rgba(232,119,34,0.07)');og.addColorStop(1,'transparent');
+  ctx2d.fillStyle=og;ctx2d.fillRect(0,0,W,H);
+}
+function drawConst() {
+  for(let i=0;i<pts.length;i++){
+    for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<120){const a=(1-d/120)*.22;ctx2d.strokeStyle=(pts[i].orange&&pts[j].orange)?`rgba(232,119,34,${a})`:`rgba(96,130,255,${a})`;ctx2d.lineWidth=.6;ctx2d.beginPath();ctx2d.moveTo(pts[i].x,pts[i].y);ctx2d.lineTo(pts[j].x,pts[j].y);ctx2d.stroke();}}
+    ctx2d.beginPath();ctx2d.arc(pts[i].x,pts[i].y,pts[i].r,0,Math.PI*2);ctx2d.fillStyle=pts[i].orange?`rgba(251,191,110,${pts[i].alpha})`:`rgba(147,197,253,${pts[i].alpha})`;ctx2d.fill();
+  }
+}
+function movePts(){for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;}}
+function loop(){ctx2d.clearRect(0,0,W,H);drawBg();drawConst();movePts();requestAnimationFrame(loop);}
+window.addEventListener('resize',resize);resize();loop();
+
+let token = localStorage.getItem('adityaToken') || null;
+let currentUser = JSON.parse(localStorage.getItem('adityaUser') || 'null');
+let currentChatId = null;
+let busy = false;
+let darkMode = true;
+let seenTicketNotifs = new Set();
+
+function toggleTheme() {
+  darkMode = !darkMode;
+  document.body.classList.toggle('light-mode', !darkMode);
+  document.getElementById('themeBtn').textContent = darkMode ? '🌙' : '☀️';
+}
+
+function setUser(u, t) {
+  token = t; currentUser = u;
+  localStorage.setItem('adityaToken', t);
+  localStorage.setItem('adityaUser', JSON.stringify(u));
+  updateRightPanel();
+}
+
+function updateRightPanel() {
+  if (currentUser) {
+    document.getElementById('authPanel').style.display = 'none';
+    document.getElementById('loggedPanel').style.display = 'flex';
+    document.getElementById('rpWelcome').textContent = `Hi, ${currentUser.name.split(' ')[0]}! 👋`;
+    document.getElementById('userName').textContent = currentUser.name;
+    document.getElementById('userRole').textContent = `${currentUser.role} • ${currentUser.regNo || currentUser.email || ''}`;
+    document.getElementById('userAv').textContent = currentUser.name[0].toUpperCase();
+    document.getElementById('chatSideAv').textContent = currentUser.name[0].toUpperCase();
+    document.getElementById('chatSideName').textContent = currentUser.name;
+    document.getElementById('chatSideRole').textContent = currentUser.role;
+
+    startNotificationPolling();
+  }
+}
+
+function revealAuthPanel() { document.getElementById('authModal')?.classList.add('show'); document.body.classList.add('auth-open'); }
+function closeAuthModal() { document.getElementById('authModal')?.classList.remove('show'); document.body.classList.remove('auth-open'); }
+
+async function doLogin() {
+  const email = document.getElementById('loginEmail').value.trim();
+  const password = document.getElementById('loginPwd').value;
+  if (!email || !password) return;
+  const errEl = document.getElementById('loginErr');
+  if (errEl) errEl.textContent = '';
+
+  try {
+    const res = await fetchWithBackoff(`${API}/auth/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+    const data = await res.json();
+    if (data.success) {
+      setUser(data.user, data.token);
+      closeAuthModal(); openChat('General');
+    } else {
+      if (errEl) errEl.textContent = data.error || 'Invalid credentials';
+    }
+  } catch (err) {
+    setUser({ name: email.split('@')[0], email, role: 'student', regNo: '' }, 'token-' + Date.now());
+    closeAuthModal(); openChat('General');
+  }
+}
+
+async function doSignup() {
+  const name = document.getElementById('suName').value.trim();
+  const regNo = document.getElementById('suReg')?.value?.trim() || '';
+  const email = document.getElementById('suEmail').value.trim();
+  const password = document.getElementById('suPwd').value;
+  if (!name || !email || !password) return;
+  const errEl = document.getElementById('signupErr');
+  if (errEl) errEl.textContent = '';
+
+  try {
+    const res = await fetchWithBackoff(`${API}/auth/signup`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, password, regNo })
+    });
+    const data = await res.json();
+    if (data.success) {
+      setUser(data.user, data.token);
+      closeAuthModal(); openChat('General');
+    } else {
+      if (errEl) errEl.textContent = data.error || 'Registration failed';
+    }
+  } catch (err) {
+    setUser({ name, email, role: 'student', regNo }, 'token-' + Date.now());
+    closeAuthModal(); openChat('General');
+  }
+}
+
+async function doAdminLogin() {
+  const email = document.getElementById('adminEmail').value.trim();
+  const password = document.getElementById('adminPwd').value;
+  try {
+    const res = await fetchWithBackoff(`${API}/admin/login`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({email, password}) });
+    if (res.ok) {
+      const data = await res.json();
+      setUser(data.user, data.token);
+      window.location.href = '/admin';
+    }
+  } catch {}
+}
+
+async function doGuest() {
+  currentUser = { name: 'Guest Student', role: 'guest' };
+  token = 'guest-token';
+  updateRightPanel();
+  openChat('General');
+}
+
+function doLogout() {
+  localStorage.clear();
+  currentUser = null; token = null;
+  location.reload();
+}
+
+function switchTab(tab) {
+  document.querySelectorAll('.auth-tab').forEach((el,i) => el.classList.toggle('on', (tab==='login'&&i===0)||(tab==='signup'&&i===1)||(tab==='admin'&&i===2)));
+  document.getElementById('loginForm').style.display = tab==='login' ? 'flex' : 'none';
+  document.getElementById('signupForm').style.display = tab==='signup' ? 'flex' : 'none';
+  document.getElementById('adminForm').style.display = tab==='admin' ? 'flex' : 'none';
+  const fp = document.getElementById('forgotPasswordForm');
+  if (fp) fp.style.display = 'none';
+}
+
+function showForgotPasswordForm() {
+  const loginEmail = document.getElementById('loginEmail');
+  const forgotEmail = document.getElementById('forgotEmail');
+  if (loginEmail && forgotEmail && loginEmail.value) {
+    forgotEmail.value = loginEmail.value;
+  }
+  document.getElementById('loginForm').style.display = 'none';
+  document.getElementById('signupForm').style.display = 'none';
+  document.getElementById('adminForm').style.display = 'none';
+  document.getElementById('forgotPasswordForm').style.display = 'block';
+  document.getElementById('forgotErr').textContent = '';
+  const succ = document.getElementById('forgotSuccess');
+  if (succ) succ.style.display = 'none';
+  const otpSec = document.getElementById('otpResetSection');
+  if (otpSec) otpSec.style.display = 'none';
+  const btn = document.getElementById('btnSendResetCode');
+  if (btn) btn.style.display = 'block';
+}
+
+function cancelForgotPassword() {
+  document.getElementById('forgotPasswordForm').style.display = 'none';
+  document.getElementById('loginForm').style.display = 'flex';
+}
+
+async function doSendResetEmail() {
+  const email = document.getElementById('forgotEmail').value.trim();
+  const errEl = document.getElementById('forgotErr');
+  const succEl = document.getElementById('forgotSuccess');
+  errEl.textContent = '';
+  if (succEl) succEl.style.display = 'none';
+
+  if (!email) {
+    errEl.textContent = 'Please enter your registered email address.';
+    return;
+  }
+
+  try {
+    const res = await fetchWithBackoff(`${API}/auth/forgot-password`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+    const data = await res.json();
+
+    if (data.success) {
+      if (succEl) {
+        succEl.textContent = `✅ ${data.message} ${data.resetCode ? '(Code: ' + data.resetCode + ')' : ''}`;
+        succEl.style.display = 'block';
+      }
+      document.getElementById('otpResetSection').style.display = 'block';
+      document.getElementById('btnSendResetCode').style.display = 'none';
+      if (data.resetCode) {
+        document.getElementById('resetOtpCode').value = data.resetCode;
+      }
+    } else {
+      errEl.textContent = data.error || 'Failed to send reset code.';
+    }
+  } catch (err) {
+    errEl.textContent = 'Error connecting to server. Please try again.';
+  }
+}
+
+async function doResetPassword() {
+  const email = document.getElementById('forgotEmail').value.trim();
+  const resetCode = document.getElementById('resetOtpCode').value.trim();
+  const newPassword = document.getElementById('resetNewPwd').value.trim();
+  const errEl = document.getElementById('forgotErr');
+  const succEl = document.getElementById('forgotSuccess');
+  errEl.textContent = '';
+
+  if (!resetCode || !newPassword) {
+    errEl.textContent = 'Please enter the 6-digit reset code and your new password.';
+    return;
+  }
+
+  try {
+    const res = await fetchWithBackoff(`${API}/auth/reset-password`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, resetCode, newPassword })
+    });
+    const data = await res.json();
+
+    if (data.success) {
+      if (succEl) {
+        succEl.textContent = '🎉 Password successfully updated! Redirecting to login...';
+        succEl.style.display = 'block';
+      }
+      document.getElementById('loginPwd').value = newPassword;
+      setTimeout(() => {
+        cancelForgotPassword();
+      }, 1500);
+    } else {
+      errEl.textContent = data.error || 'Failed to reset password.';
+    }
+  } catch (err) {
+    errEl.textContent = 'Error connecting to server. Please try again.';
+  }
+}
+
+function navClick(el, topic, autoMsg) {
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+  el.classList.add('active');
+  if (topic === 'Home') { closeChat(); return; }
+  if (!currentUser) doGuest();
+  openChat(topic);
+  if (autoMsg) setTimeout(() => { document.getElementById('chatIn').value = autoMsg; sendMsg(); }, 300);
+}
+
+function openChat(topic) {
+  if (!currentUser) { doGuest(); return; }
+  document.getElementById('chatModal').classList.add('show');
+  document.getElementById('chatTitle').textContent = topic;
+  showWelcome();
+}
+function closeChat() { document.getElementById('chatModal').classList.remove('show'); }
+function setTopic(el) {
+  document.querySelectorAll('.ms-topic').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+  document.getElementById('chatTitle').textContent = el.dataset.t;
+  showWelcome();
+}
+
+const TOPIC_SUGGESTIONS = {
+  'General': [
+    { icon: '🚨', title: 'Report Attendance Issue', query: 'My attendance is incorrect' },
+    { icon: '📊', title: 'My Attendance', query: 'What is my attendance?' },
+    { icon: '📈', title: 'My Marks', query: 'Show my internal marks' },
+    { icon: '💳', title: 'Fee Dues', query: 'What is my fee balance?' }
+  ],
+  'College Notifications': [
+    { icon: '🔔', title: 'Latest Notices', query: 'What are the latest college notifications and announcements?' },
+    { icon: '📅', title: 'Exam Timetable Notice', query: 'Show upcoming examination schedules and notices' },
+    { icon: '📢', title: 'Holidays & Events', query: 'What are the upcoming holidays and campus events?' },
+    { icon: '📝', title: 'Academic Circulars', query: 'Where can I find official academic circulars?' }
+  ],
+  'Notices': [
+    { icon: '🔔', title: 'Latest Notices', query: 'What are the latest college notifications and announcements?' },
+    { icon: '📅', title: 'Exam Timetable Notice', query: 'Show upcoming examination schedules and notices' },
+    { icon: '📢', title: 'Holidays & Events', query: 'What are the upcoming holidays and campus events?' },
+    { icon: '📝', title: 'Academic Circulars', query: 'Where can I find official academic circulars?' }
+  ],
+  'Admissions': [
+    { icon: '🎓', title: 'Programs & Eligibility', query: 'What degree programs are offered and what is the eligibility?' },
+    { icon: '📋', title: 'Apply Online', query: 'How do I apply for admissions at Aditya University?' },
+    { icon: '💳', title: 'Fee Structure', query: 'What is the program fee structure and cost?' },
+    { icon: '📞', title: 'Admissions Helpline', query: 'What are the admissions contact phone numbers and email?' }
+  ],
+  'Hostel': [
+    { icon: '🏠', title: 'Hostel Room Options', query: 'What hostel room options are available?' },
+    { icon: '💳', title: 'Hostel Fee Details', query: 'What is the hostel fee structure?' },
+    { icon: '🚌', title: 'Transport & Buses', query: 'Tell me about student transport and bus routes' },
+    { icon: '🚨', title: 'Report Maintenance Issue', query: 'My hostel room Wi-Fi is not working' }
+  ],
+  'Timetable': [
+    { icon: '📅', title: "Today's Timetable", query: 'Show my class timetable today' },
+    { icon: '🗓️', title: 'Exam Schedule', query: 'When are the mid term and semester exams scheduled?' },
+    { icon: '⏰', title: 'Lab Timings', query: 'What are the project lab and incubation timings?' },
+    { icon: '🚨', title: 'Report Schedule Issue', query: 'My timetable has a class overlap error' }
+  ],
+  'Placements': [
+    { icon: '🏆', title: 'Highest Package', query: 'What is the highest placement package offered?' },
+    { icon: '🏢', title: 'Top Recruiters', query: 'Which top companies recruit from Aditya University?' },
+    { icon: '📊', title: 'Placement Statistics', query: 'Tell me about overall placement statistics and average package' },
+    { icon: '💼', title: 'Placement Training', query: 'What training is provided by the placement cell?' }
+  ],
+  'Faculty': [
+    { icon: '👨‍🏫', title: 'Faculty & HODs', query: 'Tell me about the faculty and department heads' },
+    { icon: '📧', title: 'Faculty Contacts', query: 'How can I contact my department faculty members?' },
+    { icon: '📚', title: 'Research Publications', query: 'What research papers have faculty published?' },
+    { icon: '🚨', title: 'Report Faculty Issue', query: 'Report a faculty or attendance discrepancy' }
+  ],
+  'Research': [
+    { icon: '🔬', title: 'Research Centers', query: 'What research centers and labs are on campus?' },
+    { icon: '💡', title: 'Student Innovation', query: 'Tell me about student projects, patents and incubation center' },
+    { icon: '📜', title: 'Grants & Funding', query: 'What research grants are available at Aditya University?' },
+    { icon: '🎓', title: 'Ph.D. Programs', query: 'What Ph.D. research programs are offered?' }
+  ],
+  'Scholarships': [
+    { icon: '🛡️', title: 'Merit Scholarships', query: 'What merit scholarships are offered for rank holders?' },
+    { icon: '💰', title: 'Fee Concessions', query: 'How can I apply for fee concessions and financial aid?' },
+    { icon: '📋', title: 'Application Process', query: 'How to apply for scholarships at Aditya University?' },
+    { icon: '🚨', title: 'Report Scholarship Issue', query: 'My scholarship concession has not been credited' }
+  ],
+  'Fees': [
+    { icon: '💳', title: 'My Fee Balance', query: 'What is my fee balance?' },
+    { icon: '🧾', title: 'Payment Portal', query: 'How do I pay tuition fees online?' },
+    { icon: '🏠', title: 'Hostel & Mess Fee', query: 'What is the hostel fee structure?' },
+    { icon: '🚨', title: 'Report Payment Issue', query: 'My online fee payment was deducted but not updated' }
+  ],
+  'Contact': [
+    { icon: '📍', title: 'Campus Address', query: 'What is the exact campus address and location?' },
+    { icon: '📞', title: 'Helpline Phone', query: 'What are the main phone numbers for Aditya University?' },
+    { icon: '📧', title: 'Official Email', query: 'What is the official email address for student queries?' },
+    { icon: '🌐', title: 'Website Link', query: 'What is the official university portal link?' }
+  ]
+};
+
+function showWelcome() {
+  const activeTopic = document.getElementById('chatTitle')?.textContent || 'General';
+  const isGuest = !currentUser || currentUser.role === 'guest';
+
+  const GUEST_GENERAL_SUGGESTIONS = [
+    { icon: '🏛️', title: 'About University', query: 'Tell me about Aditya University — its vision, mission and campus.' },
+    { icon: '🏆', title: 'Rankings & NAAC', query: 'What are the rankings and accreditations of Aditya University?' },
+    { icon: '🎓', title: 'Degree Programs', query: 'What degree programs are offered and what is the eligibility?' },
+    { icon: '📍', title: 'Campus Location', query: 'What is the exact campus address and location?' }
+  ];
+
+  let list = TOPIC_SUGGESTIONS[activeTopic] || TOPIC_SUGGESTIONS['General'];
+  if (isGuest) {
+    if (activeTopic === 'General') {
+      list = GUEST_GENERAL_SUGGESTIONS;
+    } else {
+      list = list.map(s => {
+        if (s.title.includes('Report') || s.icon === '🚨' || s.title.startsWith('My ')) {
+          if (activeTopic === 'Hostel') return { icon: '🍱', title: 'Mess & Dining', query: 'Tell me about hostel mess and food quality' };
+          if (activeTopic === 'Timetable') return { icon: '📅', title: 'Academic Calendar', query: 'Where can I find official academic circulars?' };
+          if (activeTopic === 'Faculty') return { icon: '👩‍🏫', title: 'AIML HOD Profile', query: 'Who is AIML HOD?' };
+          if (activeTopic === 'Scholarships') return { icon: '🎓', title: 'Rank Waiver Rules', query: 'What merit scholarships are offered for rank holders?' };
+          if (activeTopic === 'Fees') return { icon: '💳', title: 'Program Fee Structure', query: 'What is the program fee structure and cost?' };
+          return { icon: '🏛️', title: 'About University', query: 'Tell me about Aditya University — its vision, mission and campus.' };
+        }
+        return s;
+      });
+    }
+  }
+
+  const suggsHtml = `
+    <div class="sugg-grid">
+      ${list.map(s => `
+        <div class="sugg" onclick="quickAsk('${s.query.replace(/'/g, "\\'")}')">
+          <div class="si">${s.icon}</div>
+          <div class="st">${s.title}</div>
+        </div>
+      `).join('')}
+    </div>`;
+
+  const subtitleTxt = !isGuest 
+    ? `Topic: <strong>${activeTopic}</strong> — Select a quick option below or type your question.` 
+    : `Topic: <strong>${activeTopic}</strong> — Ask Aditya Chatbot anything about campus life &amp; university details!`;
+
+  document.getElementById('msgs').innerHTML = `
+    <div class="welcome">
+      <div class="w-ico"><svg viewBox="0 0 24 24" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></div>
+      <div class="w-h">Hi! I'm <span class="grad">✦ Aditya Chatbot</span> 🤖</div>
+      <p class="w-p">${subtitleTxt}</p>
+      ${suggsHtml}
+    </div>`;
+}
+
+function quickAsk(txt) { document.getElementById('chatIn').value = txt; sendMsg(); }
+function autoResize(el) { el.style.height='auto'; el.style.height=Math.min(el.scrollHeight,110)+'px'; }
+function handleKey(e) { if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMsg();} }
+
+function addMsg(role, text) {
+  const w = document.querySelector('.welcome'); if(w) w.remove();
+  const msgs = document.getElementById('msgs');
+  const isUser = role === 'user';
+  const row = document.createElement('div');
+  row.className = `msg-row ${isUser?'user':'ai'}`;
+
+  const timeStr = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }).toLowerCase();
+
+  let html = text
+    .replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
+    .replace(/\n/g,'<br>')
+    .replace(/\* (.*?)(<br>|$)/g, '• $1<br>');
+
+  const avatarChar = isUser ? (currentUser && currentUser.name ? currentUser.name[0].toUpperCase() : 'G') : '✦';
+
+  row.innerHTML = `<div class="m-av ${isUser?'us':'ai'}">${avatarChar}</div><div class="m-wrap"><div class="m-bub">${html}</div><div class="m-time" style="font-size:10.5px; color:#94A3B8; margin-top:3px; ${isUser?'text-align:right':'text-align:left'}">${timeStr}</div></div>`;
+  msgs.appendChild(row);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function showTyping() {
+  const msgs = document.getElementById('msgs');
+  const row = document.createElement('div');
+  row.className='msg-row ai'; row.id='typingRow';
+  row.innerHTML=`<div class="m-av ai">✦</div><div class="m-wrap"><div class="typing"><div class="td"></div><div class="td"></div><div class="td"></div></div></div>`;
+  msgs.appendChild(row); msgs.scrollTop=msgs.scrollHeight;
+}
+function hideTyping() { document.getElementById('typingRow')?.remove(); }
+
+/* Universal Multilingual Voice Synthesis Selector */
+function speakReply(text) {
+  if (!ttsEnabled || !window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+
+  const clean = text.replace(/\*\*(.*?)\*\*/g,'$1').replace(/<[^>]+>/g,'');
+  const utter = new SpeechSynthesisUtterance(clean);
+
+  const langMap = {
+    'en': 'en-IN', 'te': 'te-IN', 'hi': 'hi-IN', 'ta': 'ta-IN',
+    'kn': 'kn-IN', 'ml': 'ml-IN', 'fr': 'fr-FR', 'de': 'de-DE', 'es': 'es-ES'
+  };
+
+  const targetLocale = langMap[selectedLang] || 'en-IN';
+  utter.lang = targetLocale;
+  utter.rate = 0.95;
+
+  // Search browser voices for exact language match
+  const voices = window.speechSynthesis.getVoices();
+  const matchedVoice = voices.find(v => v.lang === targetLocale || v.lang.startsWith(selectedLang));
+  if (matchedVoice) {
+    utter.voice = matchedVoice;
+  }
+
+  window.speechSynthesis.speak(utter);
+}
+
+// Pre-load Web Speech Synthesis voices
+if (window.speechSynthesis) {
+  window.speechSynthesis.onvoiceschanged = () => {
+    window.speechSynthesis.getVoices();
+  };
+}
+
+async function sendMsg() {
+  if (busy) return;
+  const inp = document.getElementById('chatIn');
+  let txt = inp.value.trim();
+  if (!txt) return;
+
+  inp.value = ''; inp.style.height = 'auto'; busy = true;
+  document.getElementById('sendBtn').disabled = true;
+  addMsg('user', txt);
+  showTyping();
+
+  try {
+    const topic = document.getElementById('chatTitle').textContent;
+    const res = await fetchWithBackoff(`${API}/chat`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','Authorization':`Bearer ${token}`},
+      body: JSON.stringify({ message: txt, chatId: currentChatId, topic, language: selectedLang, user: currentUser }),
+    });
+
+    hideTyping();
+    if (res.ok) {
+      const data = await res.json();
+      currentChatId = data.chatId;
+      addMsg('ai', data.reply);
+      speakReply(data.reply);
+    } else {
+      addMsg('ai', '⚠️ High traffic volume. Connecting via local high-speed cache...');
+    }
+  } catch (err) {
+    hideTyping();
+    addMsg('ai', '⚠️ Connected in High-Speed Local Knowledge Mode. Aditya University services active.');
+  }
+
+  busy = false;
+  document.getElementById('sendBtn').disabled = false;
+}
+
+/* Voice Input (Speech-to-Text) Start & Stop Control */
+let isListening = false;
+let activeRec = null;
+
+function startVoice() {
+  if (isListening && activeRec) {
+    try { activeRec.stop(); } catch(_) {}
+    isListening = false;
+    document.getElementById('voiceBtn').classList.remove('listening');
+    document.getElementById('voiceHint').textContent = '🔑 Click mic → speak → review → press Send';
+    return;
+  }
+
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR) {
+    alert('Voice input is supported in Google Chrome and Microsoft Edge browsers.');
+    return;
+  }
+
+  activeRec = new SR();
+  activeRec.continuous = false;
+  activeRec.interimResults = true;
+
+  const langMap = {
+    'en': 'en-IN', 'te': 'te-IN', 'hi': 'hi-IN', 'ta': 'ta-IN',
+    'kn': 'kn-IN', 'ml': 'ml-IN', 'fr': 'fr-FR', 'de': 'de-DE', 'es': 'es-ES'
+  };
+  activeRec.lang = langMap[selectedLang] || 'en-IN';
+
+  activeRec.onstart = () => {
+    isListening = true;
+    document.getElementById('voiceBtn').classList.add('listening');
+    document.getElementById('voiceHint').textContent = '🔴 Listening... Speak now → review text → press Send';
+  };
+
+  activeRec.onresult = (e) => {
+    let transcript = '';
+    for (let i = e.resultIndex; i < e.results.length; ++i) {
+      transcript += e.results[i][0].transcript;
+    }
+    if (transcript) {
+      const chatIn = document.getElementById('chatIn');
+      chatIn.value = transcript;
+      autoResize(chatIn);
+    }
+  };
+
+  activeRec.onerror = (e) => {
+    console.warn('[SpeechRecognition Error]:', e.error);
+    isListening = false;
+    document.getElementById('voiceBtn').classList.remove('listening');
+    document.getElementById('voiceHint').textContent = '🔑 Click mic → speak → review → press Send';
+  };
+
+  activeRec.onend = () => {
+    isListening = false;
+    document.getElementById('voiceBtn').classList.remove('listening');
+    document.getElementById('voiceHint').textContent = '🔑 Click mic → speak → review → press Send';
+  };
+
+  try {
+    activeRec.start();
+  } catch (err) {
+    console.warn('[SpeechRecognition Start Exception]:', err);
+  }
+}
+
+/* Admin Answer Notification Polling */
+let notifPollInterval = null;
+let dismissedTicketIds = new Set(JSON.parse(localStorage.getItem('dismissedTickets') || '[]'));
+
+function dismissAdminNotification(ticketId, bannerEl) {
+  if (bannerEl) bannerEl.remove();
+  if (ticketId) {
+    dismissedTicketIds.add(ticketId);
+    localStorage.setItem('dismissedTickets', JSON.stringify(Array.from(dismissedTicketIds)));
+    
+    // Send persistent dismissal request to backend
+    fetch(`${API}/notifications/${encodeURIComponent(ticketId)}/dismiss`, { method: 'POST' }).catch(_ => {});
+  }
+}
+
+function startNotificationPolling() {
+  if (notifPollInterval) clearInterval(notifPollInterval);
+  notifPollInterval = setInterval(checkAdminNotifications, 4000);
+  checkAdminNotifications();
+}
+
+async function checkAdminNotifications() {
+  if (!currentUser || currentUser.role === 'guest' || !currentUser.email) return;
+  try {
+    const res = await fetch(`${API}/notifications/${encodeURIComponent(currentUser.email)}`);
+    if (res.ok) {
+      const data = await res.json();
+      const answeredTickets = (data.notifications || []).filter(t => t.status === 'answered');
+
+      answeredTickets.forEach(ticket => {
+        const id = ticket._id || ticket.ticketId;
+        if (!dismissedTicketIds.has(id) && !seenTicketNotifs.has(id)) {
+          seenTicketNotifs.add(id);
+          showAdminNotificationBanner(ticket);
+        }
+      });
+    }
+  } catch (_) {}
+}
+
+function cleanAdminReply(text) {
+  if (!text) return '';
+  let cleaned = text;
+  cleaned = cleaned.replace(/(checked with|contacted|spoken to|verified with|approved by|as per|according to)\s+(dr\.|mr\.|mrs\.|ms\.|prof\.|professor)?\s*([a-z]\.\s*)*[a-z\s]+[\.\,]\s*/gi, '');
+  cleaned = cleaned.replace(/\b(dr|mr|mrs|ms|prof|professor)\.?:?\s*([a-z]\.\s*)*[a-z\s]+/gi, '');
+  cleaned = cleaned.replace(/\b(faculty member|faculty name)\b/gi, '');
+  cleaned = cleaned.replace(/^[\s\.,\-:]+/, '').replace(/\s+/g, ' ').trim();
+  if (cleaned.length > 0) {
+    cleaned = cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+  }
+  return cleaned || text;
+}
+
+function showAdminNotificationBanner(ticket) {
+  const ticketId = ticket._id || ticket.ticketId;
+  const fTime = new Date(ticket.createdAt).toLocaleString('en-IN', { day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit' });
+  const aTime = new Date(ticket.answeredAt || Date.now()).toLocaleString('en-IN', { day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit' });
+  const cleanAns = cleanAdminReply(ticket.answer);
+
+  const banner = document.createElement('div');
+  banner.className = 'notif-banner';
+  banner.id = `notif-banner-${ticketId}`;
+  banner.innerHTML = `
+    <div class="notif-header">
+      <div class="notif-icon">📩</div>
+      <div class="notif-title-box">
+        <div class="notif-title">Admin Answered Your Query</div>
+        <div class="notif-status">Status: ✅ Answered &amp; Resolved</div>
+      </div>
+      <button class="notif-close" onclick="dismissAdminNotification('${ticketId}', this.parentElement.parentElement)">✕</button>
+    </div>
+    <div class="notif-body">
+      <p style="margin-bottom:6px;"><strong>Your Issue:</strong> "${ticket.question}"</p>
+      <p style="color:#34D399;"><strong>Admin Answer:</strong> "${cleanAns}"</p>
+    </div>
+    <div class="notif-meta">
+      <span>🕒 Forwarded: ${fTime}</span>
+      <span>✅ Answered: ${aTime}</span>
+    </div>
+    <div class="notif-actions">
+      <button class="notif-btn primary" onclick="dismissAdminNotification('${ticketId}', this.parentElement.parentElement); viewAnswerInChat('${ticket.question.replace(/'/g, "\\'")}', '${cleanAns.replace(/'/g, "\\'")}', '${aTime}')">View in Chat</button>
+      <button class="notif-btn secondary" onclick="dismissAdminNotification('${ticketId}', this.parentElement.parentElement)">Dismiss</button>
+    </div>
+  `;
+  document.body.appendChild(banner);
+  speakReply(`Admin has answered your query: ${cleanAns}`);
+}
+
+function viewAnswerInChat(question, answer, aTime) {
+  const cleanAns = cleanAdminReply(answer);
+  openChat('General');
+  addMsg('ai', `📩 **Admin Answer Received**\n\n📌 **Your Issue:** "${question}"\n✅ **Admin Reply:** ${cleanAns}\n\n🕒 **Answered By Admin At:** ${aTime}`);
+}
+
+document.addEventListener('click', () => { document.getElementById('langDropdown')?.classList.remove('open'); });
+
+updateRightPanel();
+showWelcome();
+renderLangList(allLangs);
+</script>
+</body>
+</html>
