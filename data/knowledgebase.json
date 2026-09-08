@@ -1,0 +1,51 @@
+[
+  {
+    "key": "overview",
+    "category": "overview",
+    "title": "ADITYA UNIVERSITY OVERVIEW",
+    "content": "Aditya University is a premier multidisciplinary institution located at Aditya Nagar, ADB Road, Surampalem, Kakinada District, Andhra Pradesh – 533437.\nAccreditations: NAAC A++ Accredited | NBA Tier-1 Accredited.\nEstablishment: Founded in 1984 under Aditya Academy; Established under the AP Private Universities Act, 2016.\nLegacy: 80+ Institutions, 8,000+ Staff, and 80,000+ Students across Andhra Pradesh.\nWebsite: https://www.adityauniversity.in/",
+    "keywords": ["overview", "aditya", "university", "kakinada", "surampalem", "about"]
+  },
+  {
+    "key": "leadership",
+    "category": "leadership",
+    "title": "LEADERSHIP & ADMINISTRATION",
+    "content": "Chancellor: Dr. N. Sesha Reddy\nPro-Chancellors: Dr. N. Satish Reddy & Sri. N. Deepak Reddy\nDy. Pro-Chancellor: Dr. M. Sreenivasa Reddy\nVice Chancellor: Dr. M.B. Srinivas\nPro Vice-Chancellors: Dr. A. Ramesh (Engg. & Sciences), Dr. S. Rama Sree (Academics), Dr. Thangjam Ravichandra (S & P)\nRegistrar: Dr. G. Suresh\nController of Examinations: Dr. J. Pavan\nDean - Research: Dr. A. Saravanan\nDean - International Relations: Dr. P. S. Ranjit\nDean - Admissions: Dr. A. Ramakrishna\nDean - Career Development: Dr. G. Sanjiv Rao\nDean - Student Welfare: Dr. Y. Krishna Srinivasa Subba Rao\nDean - School of Engineering: Dr. G. Sridevi\nDean - School of Pharmacy: Dr. D. Sathis Kumar",
+    "keywords": ["chancellor", "vice chancellor", "vc", "registrar", "dean", "sesha reddy", "leadership", "management"]
+  },
+  {
+    "key": "rankings",
+    "category": "rankings",
+    "title": "RANKINGS & RECOGNITIONS",
+    "content": "NIRF Rank Band: 151–200 in University Category (50th Rank in India)\nNBA Tier-1 Accredited (CE, EEE, ME, ECE, CSE, IT)\nNAAC A++ Accreditation\nTimes Higher Education: 14th Among Private Institutions across India\nAcademic Insights: 27th Rank in Top 50 Engineering Colleges\nSiliconIndia: 4th Rank in South India\nThe Week - Hansa Research: 36th Rank\nQS Gauge: Diamond Rating\nSWAYAM-NPTEL: AA Rating Local Chapter\nSIRO: Recognized as Scientific and Industrial Research Organisation",
+    "keywords": ["rankings", "nirf", "naac", "nba", "tier 1", "times higher education", "siliconindia", "qs gauge"]
+  },
+  {
+    "key": "history",
+    "category": "history",
+    "title": "HISTORY & LEGACY",
+    "content": "Aditya Academy was founded in 1984 by Dr. N. Sesha Reddy. Aditya Engineering College (AEC) established in 2001. Evolved into Aditya University under AP Private Universities Act 2016. Today it spans 80+ Institutions, 8,000+ Staff, and 80,000+ Students across Andhra Pradesh.",
+    "keywords": ["history", "legacy", "1984", "2001", "aec", "sesha reddy", "80+ institutions"]
+  },
+  {
+    "key": "vision",
+    "category": "vision",
+    "title": "VISION, MISSION & CORE VALUES",
+    "content": "Vision: To be a globally recognized university through excellence in Education, Innovation, and Sustainable growth.\nMission: Deliver collaborative education to prepare students for global challenges through Transformative learning, a Vibrant research ecosystem, and a Sustainable community.\nCore Values: Excellence, Inclusivity & Diversity, Integrity & Ethical Conduct, Global Outlook.",
+    "keywords": ["vision", "mission", "values", "core values", "motto"]
+  },
+  {
+    "key": "placements",
+    "category": "placements",
+    "title": "PLACEMENTS & RECRUITERS",
+    "content": "Highest Alumni Offers: M. Akhilesh (₹106.00 LPA), G. Rajesh (₹106.00 LPA).\n2025-2026 Batch Placements: D. Veera Venkata Durga Bhan Raju (₹39.60 LPA), Y. Ramya (₹31.62 LPA), N. Sai Raghavendra Nithin (₹31.62 LPA), P. Srinivas (₹29.87 LPA), S. Roshin Roja (₹29.87 LPA), A. Pujitha (₹27.81 LPA), Charlton Shallock (₹27.79 LPA), G. Dhruvith (₹26.31 LPA), K. Sumanth (₹18.10 LPA).\nTop Recruiters: Capgemini, Accenture, Autodesk, Hitachi, L&T, Walmart, Toyota Connect, Control's.",
+    "keywords": ["placements", "salary", "package", "recruiters", "akhilesh", "rajesh", "106 lpa", "39.60 lpa"]
+  },
+  {
+    "key": "hostel",
+    "category": "hostel",
+    "title": "HOSTEL & AMENITIES",
+    "content": "Aditya University offers Single, Double, Triple, and Quadruple hostel rooms for students.\nState-of-the-art amenities: AC, Electricity, High-speed Wi-Fi, TV, and Refrigerator.\nHostel Fee Details: https://www.adityauniversity.in/admissions/hostel-fee",
+    "keywords": ["hostel", "room", "wifi", "ac", "mess", "food"]
+  }
+]

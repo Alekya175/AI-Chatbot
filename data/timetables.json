@@ -1,0 +1,2490 @@
+[
+  {
+    "section": "AIML - T1 (GOOGLE)",
+    "roomNo": "216",
+    "floor": "Second Floor",
+    "block": "Bhaskar Bhavan",
+    "semester": "II-B. Tech / III Sem (A.Y. 2026-27)",
+    "schedule": {
+      "Monday": [
+        {
+          "time": "10:30 - 11:20",
+          "subject": "ES-Aptitude",
+          "code": "APT"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Probability & Statistics",
+          "code": "P&S"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "2:50 - 3:40",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Agile Software Engineering",
+          "code": "ASE"
+        },
+        {
+          "time": "10:30 - 11:20",
+          "subject": "Artificial Intelligence",
+          "code": "AI"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Data Analysis Essentials",
+          "code": "DAE"
+        },
+        {
+          "time": "2:50 - 3:40",
+          "subject": "Advanced Data Structures & Algorithm Analysis",
+          "code": "ADSAA"
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": "9:30 - 11:20",
+          "subject": "C++ Programming",
+          "code": "C++"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Probability & Statistics",
+          "code": "P&S"
+        },
+        {
+          "time": "1:50 - 3:40",
+          "subject": "ES-SoftSkills",
+          "code": "SS"
+        }
+      ],
+      "Thursday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "C++ Programming",
+          "code": "C++"
+        },
+        {
+          "time": "10:30 - 11:20",
+          "subject": "Advanced Data Structures & Algorithm Analysis",
+          "code": "ADSAA"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Artificial Intelligence",
+          "code": "AI"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        }
+      ],
+      "Friday": [
+        {
+          "time": "10:30 - 11:20",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "C++ Programming",
+          "code": "C++"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Data Analysis Essentials",
+          "code": "DAE"
+        }
+      ],
+      "Saturday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Artificial Intelligence",
+          "code": "AI"
+        },
+        {
+          "time": "10:30 - 11:20",
+          "subject": "Probability & Statistics",
+          "code": "P&S"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "C++ Programming",
+          "code": "C++"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Advanced Data Structures & Algorithm Analysis",
+          "code": "ADSAA"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "2:50 - 3:40",
+          "subject": "Agile Software Engineering",
+          "code": "ASE"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ]
+    },
+    "faculty": [
+      {
+        "subject": "Probability & Statistics",
+        "code": "P&S",
+        "faculty": "Dr. G. V. Chandramouli"
+      },
+      {
+        "subject": "Advanced Data Structures & Algorithm Analysis",
+        "code": "ADSAA",
+        "faculty": "Mr. Govindaraju"
+      },
+      {
+        "subject": "Artificial Intelligence",
+        "code": "AI",
+        "faculty": "Dr. N. Rambabu"
+      },
+      {
+        "subject": "C++ Programming",
+        "code": "C++",
+        "faculty": "K. Shyamala Kalyani"
+      },
+      {
+        "subject": "Database Management Systems",
+        "code": "DBMS",
+        "faculty": "Mr. M. Sudheer"
+      },
+      {
+        "subject": "Agile Software Engineering",
+        "code": "ASE",
+        "faculty": "A. Divya Bharati"
+      },
+      {
+        "subject": "Data Analysis Essentials",
+        "code": "DAE",
+        "faculty": "A. Divya Bharati"
+      },
+      {
+        "subject": "Softskills",
+        "code": "SS",
+        "faculty": "P. Durga Raja Choudhuri"
+      },
+      {
+        "subject": "Aptitude",
+        "code": "APT",
+        "faculty": "S. Tejeswar Reddy"
+      }
+    ]
+  },
+  {
+    "section": "AIML - T2 (MICROSOFT)",
+    "roomNo": "208",
+    "floor": "Second Floor",
+    "block": "Bhaskar Bhavan",
+    "semester": "II-B. Tech / III Sem (A.Y. 2026-27)",
+    "schedule": {
+      "Monday": [
+        {
+          "time": "10:30 - 11:20",
+          "subject": "ES-Aptitude",
+          "code": "APT"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Data Analysis Essentials",
+          "code": "DAE"
+        },
+        {
+          "time": "2:50 - 3:40",
+          "subject": "Artificial Intelligence",
+          "code": "AI"
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": "9:30 - 11:20",
+          "subject": "DP 900 Certification",
+          "code": "DP900"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Probability & Statistics",
+          "code": "P&S"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "2:50 - 3:40",
+          "subject": "Advanced Data Structures & Algorithm Analysis",
+          "code": "ADSAA"
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": "9:30 - 11:20",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "C++ Programming",
+          "code": "C++"
+        },
+        {
+          "time": "1:50 - 3:40",
+          "subject": "ES-SoftSkills",
+          "code": "SS"
+        }
+      ],
+      "Thursday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Agile Software Engineering",
+          "code": "ASE"
+        },
+        {
+          "time": "10:30 - 11:20",
+          "subject": "Data Analysis Essentials",
+          "code": "DAE"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Advanced Data Structures & Algorithm Analysis",
+          "code": "ADSAA"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "C++ Programming",
+          "code": "C++"
+        }
+      ],
+      "Friday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Probability & Statistics",
+          "code": "P&S"
+        },
+        {
+          "time": "10:30 - 11:20",
+          "subject": "Artificial Intelligence",
+          "code": "AI"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Advanced Data Structures & Algorithm Analysis",
+          "code": "ADSAA"
+        }
+      ],
+      "Saturday": [
+        {
+          "time": "9:30 - 11:20",
+          "subject": "C++ Programming",
+          "code": "C++"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "DP 900 Certification",
+          "code": "DP900"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ]
+    },
+    "faculty": [
+      {
+        "subject": "Probability & Statistics",
+        "code": "P&S",
+        "faculty": "V. Lakshmi Shalaji"
+      },
+      {
+        "subject": "Advanced Data Structures & Algorithm Analysis",
+        "code": "ADSAA",
+        "faculty": "R. Kabilesh"
+      },
+      {
+        "subject": "Artificial Intelligence",
+        "code": "AI",
+        "faculty": "Dr. K R K V Prasad"
+      },
+      {
+        "subject": "C++ Programming",
+        "code": "C++",
+        "faculty": "M. Chaitanya"
+      },
+      {
+        "subject": "Database Management Systems",
+        "code": "DBMS",
+        "faculty": "S. Ramana"
+      },
+      {
+        "subject": "Agile Software Engineering",
+        "code": "ASE",
+        "faculty": "Mr. A. Chaitanya"
+      },
+      {
+        "subject": "Data Analysis Essentials",
+        "code": "DAE",
+        "faculty": "Mr. A. Chaitanya"
+      },
+      {
+        "subject": "DP 900 Certification",
+        "code": "DP900",
+        "faculty": "V. Ramya Sri"
+      },
+      {
+        "subject": "Softskills",
+        "code": "SS",
+        "faculty": "P. Durga Raja Choudhuri"
+      },
+      {
+        "subject": "Aptitude",
+        "code": "APT",
+        "faculty": "B. Kameswara Sarma"
+      }
+    ]
+  },
+  {
+    "section": "AIML - T3 (Rooms 204, 205, 206, 207)",
+    "roomNo": "204",
+    "floor": "Second Floor",
+    "block": "Bhaskar Bhavan",
+    "semester": "II-B. Tech / III Sem (A.Y. 2026-27)",
+    "schedule": {
+      "Monday": [
+        {
+          "time": "10:30 - 11:20",
+          "subject": "ES-Aptitude",
+          "code": "APT"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Data Analysis Essentials",
+          "code": "DAE"
+        },
+        {
+          "time": "2:50 - 3:40",
+          "subject": "Artificial Intelligence",
+          "code": "AI"
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": "9:30 - 11:20",
+          "subject": "C++ Programming",
+          "code": "C++"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Probability & Statistics",
+          "code": "P&S"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "2:50 - 3:40",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": "9:30 - 11:20",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "C++ Programming",
+          "code": "C++"
+        },
+        {
+          "time": "1:50 - 3:40",
+          "subject": "ES-SoftSkills",
+          "code": "SS"
+        }
+      ],
+      "Thursday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Agile Software Engineering",
+          "code": "ASE"
+        },
+        {
+          "time": "10:30 - 11:20",
+          "subject": "Data Analysis Essentials",
+          "code": "DAE"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Advanced Data Structures & Algorithm Analysis",
+          "code": "ADSAA"
+        },
+        {
+          "time": "1:50 - 3:40",
+          "subject": "C++ Programming",
+          "code": "C++"
+        }
+      ],
+      "Friday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Probability & Statistics",
+          "code": "P&S"
+        },
+        {
+          "time": "10:30 - 11:20",
+          "subject": "Artificial Intelligence",
+          "code": "AI"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "1:50 - 3:40",
+          "subject": "Advanced Data Structures & Algorithm Analysis",
+          "code": "ADSAA"
+        }
+      ]
+    },
+    "faculty": [
+      {
+        "subject": "Probability & Statistics",
+        "code": "P&S",
+        "faculty": "Dr. D. Srinivasa Rao"
+      },
+      {
+        "subject": "Advanced Data Structures & Algorithm Analysis",
+        "code": "ADSAA",
+        "faculty": "Mr. P. Nagendrudu"
+      },
+      {
+        "subject": "Artificial Intelligence",
+        "code": "AI",
+        "faculty": "Dr. V. Raviteja"
+      },
+      {
+        "subject": "C++ Programming",
+        "code": "C++",
+        "faculty": "Dr. M. Venkatesh"
+      },
+      {
+        "subject": "Database Management Systems",
+        "code": "DBMS",
+        "faculty": "Mr. D. Priyanth"
+      },
+      {
+        "subject": "Agile Software Engineering",
+        "code": "ASE",
+        "faculty": "Mr. B. Sai Ganesh"
+      },
+      {
+        "subject": "Data Analysis Essentials",
+        "code": "DAE",
+        "faculty": "Mr. B. Sai Ganesh"
+      },
+      {
+        "subject": "Softskills",
+        "code": "SS",
+        "faculty": "Lingampally Tirupati"
+      },
+      {
+        "subject": "Aptitude",
+        "code": "APT",
+        "faculty": "G. Prudhvi"
+      }
+    ]
+  },
+  {
+    "section": "AIML - T4 (Rooms 209, 215)",
+    "roomNo": "209",
+    "floor": "Second Floor",
+    "block": "Bhaskar Bhavan",
+    "semester": "II-B. Tech / III Sem (A.Y. 2026-27)",
+    "schedule": {
+      "Monday": [
+        {
+          "time": "10:30 - 11:20",
+          "subject": "ES-Aptitude",
+          "code": "APT"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Probability & Statistics",
+          "code": "P&S"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "2:50 - 3:40",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": "9:30 - 11:20",
+          "subject": "C++ Programming",
+          "code": "C++"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Data Analysis Essentials",
+          "code": "DAE"
+        },
+        {
+          "time": "2:50 - 3:40",
+          "subject": "Advanced Data Structures & Algorithm Analysis",
+          "code": "ADSAA"
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Agile Software Engineering",
+          "code": "ASE"
+        },
+        {
+          "time": "10:30 - 11:20",
+          "subject": "C++ Programming",
+          "code": "C++"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Probability & Statistics",
+          "code": "P&S"
+        },
+        {
+          "time": "1:50 - 3:40",
+          "subject": "ES-SoftSkills",
+          "code": "SS"
+        }
+      ],
+      "Thursday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "C++ Programming",
+          "code": "C++"
+        },
+        {
+          "time": "10:30 - 11:20",
+          "subject": "Artificial Intelligence",
+          "code": "AI"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Data Analysis Essentials",
+          "code": "DAE"
+        }
+      ],
+      "Friday": [
+        {
+          "time": "9:30 - 11:20",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Artificial Intelligence",
+          "code": "AI"
+        },
+        {
+          "time": "1:50 - 3:40",
+          "subject": "Advanced Data Structures & Algorithm Analysis",
+          "code": "ADSAA"
+        }
+      ]
+    },
+    "faculty": [
+      {
+        "subject": "Probability & Statistics",
+        "code": "P&S",
+        "faculty": "Dr. D. Srinivasa Rao"
+      },
+      {
+        "subject": "Advanced Data Structures & Algorithm Analysis",
+        "code": "ADSAA",
+        "faculty": "Ch. Sri Divya"
+      },
+      {
+        "subject": "Artificial Intelligence",
+        "code": "AI",
+        "faculty": "Dr. N. Rambabu"
+      },
+      {
+        "subject": "C++ Programming",
+        "code": "C++",
+        "faculty": "E. Rahelu Ramya"
+      },
+      {
+        "subject": "Database Management Systems",
+        "code": "DBMS",
+        "faculty": "T. Srinivas"
+      },
+      {
+        "subject": "Agile Software Engineering",
+        "code": "ASE",
+        "faculty": "Dr. M. Naresh"
+      },
+      {
+        "subject": "Data Analysis Essentials",
+        "code": "DAE",
+        "faculty": "Dr. M. Naresh"
+      },
+      {
+        "subject": "Softskills",
+        "code": "SS",
+        "faculty": "P. Durga Raja Choudhuri"
+      },
+      {
+        "subject": "Aptitude",
+        "code": "APT",
+        "faculty": "B. Kameswara Sarma"
+      }
+    ]
+  },
+  {
+    "section": "AIML - T1 (Rooms 101, 102, 103, 104, 105)",
+    "roomNo": "101",
+    "floor": "First Floor",
+    "block": "Bhaskar Bhavan",
+    "semester": "II-B. Tech / III Sem (A.Y. 2026-27)",
+    "schedule": {
+      "Monday": [
+        {
+          "time": "10:30 - 11:20",
+          "subject": "ES-Aptitude",
+          "code": "APT"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "C++ Programming",
+          "code": "C++"
+        },
+        {
+          "time": "1:50 - 3:40",
+          "subject": "Data Analysis Essentials",
+          "code": "DAE"
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Probability & Statistics",
+          "code": "P&S"
+        },
+        {
+          "time": "10:30 - 11:20",
+          "subject": "Artificial Intelligence",
+          "code": "AI"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "1:50 - 3:40",
+          "subject": "Data Analysis Essentials",
+          "code": "DAE"
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "C++ Programming",
+          "code": "C++"
+        },
+        {
+          "time": "10:30 - 11:20",
+          "subject": "Advanced Data Structures & Algorithm Analysis",
+          "code": "ADSAA"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "1:50 - 3:40",
+          "subject": "ES-SoftSkills",
+          "code": "SS"
+        }
+      ],
+      "Thursday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "C++ Programming",
+          "code": "C++"
+        },
+        {
+          "time": "10:30 - 11:20",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Probability & Statistics",
+          "code": "P&S"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Agile Software Engineering",
+          "code": "ASE"
+        },
+        {
+          "time": "2:50 - 3:40",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ],
+      "Friday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Database Management Systems",
+          "code": "DBMS"
+        },
+        {
+          "time": "10:30 - 11:20",
+          "subject": "Advanced Data Structures & Algorithm Analysis",
+          "code": "ADSAA"
+        },
+        {
+          "time": "1:00 - 1:50",
+          "subject": "Artificial Intelligence",
+          "code": "AI"
+        },
+        {
+          "time": "1:50 - 3:40",
+          "subject": "C++ Programming",
+          "code": "C++"
+        }
+      ]
+    },
+    "faculty": [
+      {
+        "subject": "Probability & Statistics",
+        "code": "P&S",
+        "faculty": "Dr. D. Srinivasa Rao"
+      },
+      {
+        "subject": "Advanced Data Structures & Algorithm Analysis",
+        "code": "ADSAA",
+        "faculty": "Mrs. Ch. Bharathi"
+      },
+      {
+        "subject": "Artificial Intelligence",
+        "code": "AI",
+        "faculty": "Dr. V. Raviteja"
+      },
+      {
+        "subject": "C++ Programming",
+        "code": "C++",
+        "faculty": "Dr. M. Venkatesh"
+      },
+      {
+        "subject": "Database Management Systems",
+        "code": "DBMS",
+        "faculty": "Mr. D. Priyanth"
+      },
+      {
+        "subject": "Agile Software Engineering",
+        "code": "ASE",
+        "faculty": "Mr. B. Sai Ganesh"
+      },
+      {
+        "subject": "Data Analysis Essentials",
+        "code": "DAE",
+        "faculty": "Mr. B. Sai Ganesh"
+      },
+      {
+        "subject": "Softskills",
+        "code": "SS",
+        "faculty": "Nathi Keerthi"
+      },
+      {
+        "subject": "Aptitude",
+        "code": "APT",
+        "faculty": "M. Vijay Kumar"
+      }
+    ]
+  },
+  {
+    "section": "AIML 5th Sem - T6 (Cognitive Analytics)",
+    "roomNo": "308",
+    "floor": "Third Floor",
+    "block": "Bhaskar Bhavan",
+    "semester": "III-B. Tech / V Sem (A.Y. 2026-27)",
+    "schedule": {
+      "Monday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "Computer Vision",
+          "code": "CV"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Soft Computing",
+          "code": "SC"
+        },
+        {
+          "time": "1:50 - 4:20",
+          "subject": "ES-Softskills",
+          "code": "SS"
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Engineering Economics & Management",
+          "code": "EEM"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "OOAD",
+          "code": "OOAD"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "API & Micro Services",
+          "code": "API"
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "ES-Aptitude",
+          "code": "APT"
+        },
+        {
+          "time": "12:10 - 1:00",
+          "subject": "Computer Networks",
+          "code": "CN"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "API & Micro Services",
+          "code": "API"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ],
+      "Thursday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "API & Micro Services",
+          "code": "API"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Soft Computing",
+          "code": "SC"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ],
+      "Friday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "Computer Vision",
+          "code": "CV"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "OOAD",
+          "code": "OOAD"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "API & Micro Services",
+          "code": "API"
+        }
+      ]
+    },
+    "faculty": [
+      {
+        "subject": "Computer Networks",
+        "code": "CN",
+        "faculty": "K. Naga Rajani"
+      },
+      {
+        "subject": "Machine Learning",
+        "code": "ML",
+        "faculty": "Mr. G. Siva Shankar"
+      },
+      {
+        "subject": "OOAD",
+        "code": "OOAD",
+        "faculty": "K. Naga Rajani"
+      },
+      {
+        "subject": "Engineering Economics & Management",
+        "code": "EEM",
+        "faculty": "Dr. M. Visaliakshi"
+      },
+      {
+        "subject": "Computer Vision",
+        "code": "CV",
+        "faculty": "D. Phani Kumar"
+      },
+      {
+        "subject": "API & Micro Services",
+        "code": "API",
+        "faculty": "Kasimbee Shaik"
+      },
+      {
+        "subject": "Soft Computing",
+        "code": "SC",
+        "faculty": "Dr. KNSL Kumar"
+      },
+      {
+        "subject": "Softskills",
+        "code": "SS",
+        "faculty": "GVS Kiran Kumar"
+      },
+      {
+        "subject": "Aptitude",
+        "code": "APT",
+        "faculty": "S. Tejeswar Reddy"
+      }
+    ]
+  },
+  {
+    "section": "AIML 5th Sem - T3 (Cognitive Analytics)",
+    "roomNo": "304",
+    "floor": "Third Floor",
+    "block": "Bhaskar Bhavan",
+    "semester": "III-B. Tech / V Sem (A.Y. 2026-27)",
+    "schedule": {
+      "Monday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Computer Networks",
+          "code": "CN"
+        },
+        {
+          "time": "10:20 - 11:10",
+          "subject": "API & Micro Services",
+          "code": "API"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Engineering Economics & Management",
+          "code": "EEM"
+        },
+        {
+          "time": "1:50 - 4:20",
+          "subject": "ES-Softskills",
+          "code": "SS"
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "OOAD LAB",
+          "code": "OOAD"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Computer Vision",
+          "code": "CV"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Soft Computing",
+          "code": "SC"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "Machine Learning",
+          "code": "ML"
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "ES-Aptitude",
+          "code": "APT"
+        },
+        {
+          "time": "12:10 - 1:00",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Soft Computing",
+          "code": "SC"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "API & Micro Services",
+          "code": "API"
+        }
+      ],
+      "Thursday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "OOAD LAB",
+          "code": "OOAD"
+        },
+        {
+          "time": "12:10 - 1:00",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "API & Micro Services",
+          "code": "API"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ],
+      "Friday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "12:10 - 1:00",
+          "subject": "API & Micro Services",
+          "code": "API"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Computer Vision",
+          "code": "CV"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ]
+    },
+    "faculty": [
+      {
+        "subject": "Computer Networks",
+        "code": "CN",
+        "faculty": "R. Sri Divya"
+      },
+      {
+        "subject": "Machine Learning",
+        "code": "ML",
+        "faculty": "R. Suneetha"
+      },
+      {
+        "subject": "OOAD",
+        "code": "OOAD",
+        "faculty": "S. Vijaya Nirmala"
+      },
+      {
+        "subject": "Engineering Economics & Management",
+        "code": "EEM",
+        "faculty": "Ms. V. Suneetha"
+      },
+      {
+        "subject": "Computer Vision",
+        "code": "CV",
+        "faculty": "Mr. D. Satyanarayana"
+      },
+      {
+        "subject": "API & Micro Services",
+        "code": "API",
+        "faculty": "Mrs. Ch. DVP Kumari"
+      },
+      {
+        "subject": "Soft Computing",
+        "code": "SC",
+        "faculty": "Dr. M. Vamsi Krishna"
+      },
+      {
+        "subject": "Softskills",
+        "code": "SS",
+        "faculty": "Valluri Abilash"
+      },
+      {
+        "subject": "Aptitude",
+        "code": "APT",
+        "faculty": "G. Devi"
+      }
+    ]
+  },
+  {
+    "section": "AIML 5th Sem - T4 (Cognitive Analytics)",
+    "roomNo": "306",
+    "floor": "Third Floor",
+    "block": "Bhaskar Bhavan",
+    "semester": "III-B. Tech / V Sem (A.Y. 2026-27)",
+    "schedule": {
+      "Monday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "OOAD LAB",
+          "code": "OOAD"
+        },
+        {
+          "time": "1:50 - 4:20",
+          "subject": "ES-Softskills",
+          "code": "SS"
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "API & Micro Services",
+          "code": "API"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Soft Computing",
+          "code": "SC"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "Computer Vision",
+          "code": "CV"
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "ES-Aptitude",
+          "code": "APT"
+        },
+        {
+          "time": "12:10 - 1:00",
+          "subject": "Computer Networks",
+          "code": "CN"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "API & Micro Services",
+          "code": "API"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "Computer Vision",
+          "code": "CV"
+        }
+      ],
+      "Thursday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "API & Micro Services",
+          "code": "API"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Engineering Economics & Management",
+          "code": "EEM"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ],
+      "Friday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "OOAD LAB",
+          "code": "OOAD"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Computer Vision",
+          "code": "CV"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Soft Computing",
+          "code": "SC"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ]
+    },
+    "faculty": [
+      {
+        "subject": "Computer Networks",
+        "code": "CN",
+        "faculty": "B. Lakshmi Durga"
+      },
+      {
+        "subject": "Machine Learning",
+        "code": "ML",
+        "faculty": "Mrs. P. Annapurna"
+      },
+      {
+        "subject": "OOAD",
+        "code": "OOAD",
+        "faculty": "S. Vijaya Nirmala"
+      },
+      {
+        "subject": "Engineering Economics & Management",
+        "code": "EEM",
+        "faculty": "Dr. M. Visaliakshi"
+      },
+      {
+        "subject": "Computer Vision",
+        "code": "CV",
+        "faculty": "Mr. D. Satyanarayana"
+      },
+      {
+        "subject": "API & Micro Services",
+        "code": "API",
+        "faculty": "Mrs. Ch. DVP Kumari"
+      },
+      {
+        "subject": "Soft Computing",
+        "code": "SC",
+        "faculty": "Dr. M. Vamsi Krishna"
+      },
+      {
+        "subject": "Softskills",
+        "code": "SS",
+        "faculty": "Eeda Vamsi"
+      },
+      {
+        "subject": "Aptitude",
+        "code": "APT",
+        "faculty": "B. Kameswara Sarma"
+      }
+    ]
+  },
+  {
+    "section": "AIML 5th Sem - T1 (Network Security)",
+    "roomNo": "224",
+    "floor": "Second Floor",
+    "block": "Bhaskar Bhavan",
+    "semester": "III-B. Tech / V Sem (A.Y. 2026-27)",
+    "schedule": {
+      "Monday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "Cloud IoT & Edge ML",
+          "code": "CCML"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Cloud Computing",
+          "code": "CC"
+        },
+        {
+          "time": "1:50 - 4:20",
+          "subject": "ES-Softskills",
+          "code": "SS"
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "Cloud IoT & Edge ML",
+          "code": "CCML"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "ML LAB",
+          "code": "ML"
+        },
+        {
+          "time": "1:50 - 3:40",
+          "subject": "OOAD LAB",
+          "code": "OOAD"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "ES-Aptitude",
+          "code": "APT"
+        },
+        {
+          "time": "12:10 - 1:00",
+          "subject": "Computer Networks",
+          "code": "CN"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Wireless Networks",
+          "code": "WN"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "Machine Learning",
+          "code": "ML"
+        }
+      ],
+      "Thursday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Wireless Networks",
+          "code": "WN"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Cloud Computing",
+          "code": "CC"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Engineering Economics & Management",
+          "code": "EEM"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "Machine Learning",
+          "code": "ML"
+        }
+      ],
+      "Friday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "OOAD LAB",
+          "code": "OOAD"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Cloud Computing",
+          "code": "CC"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ]
+    },
+    "faculty": [
+      {
+        "subject": "Computer Networks",
+        "code": "CN",
+        "faculty": "Mercy Jasper"
+      },
+      {
+        "subject": "Machine Learning",
+        "code": "ML",
+        "faculty": "Mrs. P. Annapurna"
+      },
+      {
+        "subject": "OOAD",
+        "code": "OOAD",
+        "faculty": "Mercy Jasper"
+      },
+      {
+        "subject": "Engineering Economics & Management",
+        "code": "EEM",
+        "faculty": "Ms. V. Suneetha"
+      },
+      {
+        "subject": "Cloud IoT & Edge ML",
+        "code": "CCML",
+        "faculty": "Mr. V. Shalem Teja"
+      },
+      {
+        "subject": "Cloud Computing",
+        "code": "CC",
+        "faculty": "A. Divya Bharati"
+      },
+      {
+        "subject": "Wireless Networks",
+        "code": "WN",
+        "faculty": "Dr. G. Sanjeev Rao"
+      },
+      {
+        "subject": "Softskills",
+        "code": "SS",
+        "faculty": "P. Durga Raja Choudhuri"
+      },
+      {
+        "subject": "Aptitude",
+        "code": "APT",
+        "faculty": "G. Prudhvi"
+      }
+    ]
+  },
+  {
+    "section": "AIML 5th Sem - T2 (Mobile Application Development)",
+    "roomNo": "301",
+    "floor": "Third Floor",
+    "block": "Bhaskar Bhavan",
+    "semester": "III-B. Tech / V Sem (A.Y. 2026-27)",
+    "schedule": {
+      "Monday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "OOAD LAB",
+          "code": "OOAD"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "1:50 - 4:20",
+          "subject": "ES-Softskills",
+          "code": "SS"
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Engineering Economics & Management",
+          "code": "EEM"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "API & Micro Services",
+          "code": "API"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Wireless Networks",
+          "code": "WN"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "Cloud IoT & Edge ML",
+          "code": "CCML"
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "ES-Aptitude",
+          "code": "APT"
+        },
+        {
+          "time": "12:10 - 1:00",
+          "subject": "Cloud IoT & Edge ML",
+          "code": "CCML"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ],
+      "Thursday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "Cloud IoT & Edge ML",
+          "code": "CCML"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "API & Micro Services",
+          "code": "API"
+        },
+        {
+          "time": "1:50 - 3:40",
+          "subject": "OOAD LAB",
+          "code": "OOAD"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "Computer Networks",
+          "code": "CN"
+        }
+      ],
+      "Friday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Wireless Networks",
+          "code": "WN"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "API & Micro Services",
+          "code": "API"
+        },
+        {
+          "time": "3:40 - 4:20",
+          "subject": "FIP",
+          "code": "FIP"
+        }
+      ]
+    },
+    "faculty": [
+      {
+        "subject": "Computer Networks",
+        "code": "CN",
+        "faculty": "Mercy Jasper"
+      },
+      {
+        "subject": "Machine Learning",
+        "code": "ML",
+        "faculty": "Mr. M. Subrahmanyam"
+      },
+      {
+        "subject": "OOAD",
+        "code": "OOAD",
+        "faculty": "Mercy Jasper"
+      },
+      {
+        "subject": "Engineering Economics & Management",
+        "code": "EEM",
+        "faculty": "Ms. V. Suneetha"
+      },
+      {
+        "subject": "Cloud IoT & Edge ML",
+        "code": "CCML",
+        "faculty": "Mr. V. Shalem Teja"
+      },
+      {
+        "subject": "API & Micro Services",
+        "code": "API",
+        "faculty": "Dr. D. Veeraswamy"
+      },
+      {
+        "subject": "Wireless Networks",
+        "code": "WN",
+        "faculty": "Dr. N. Rahul Paul"
+      },
+      {
+        "subject": "Softskills",
+        "code": "SS",
+        "faculty": "P. Durga Raja Choudhuri"
+      },
+      {
+        "subject": "Aptitude",
+        "code": "APT",
+        "faculty": "G. Prudhvi"
+      }
+    ]
+  },
+  {
+    "section": "AIML 5th Sem - T5 (THUB - Cognitive Analytics)",
+    "roomNo": "307",
+    "floor": "Third Floor",
+    "block": "Bhaskar Bhavan",
+    "semester": "III-B. Tech / V Sem (A.Y. 2026-27)",
+    "schedule": {
+      "Monday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "Soft Computing",
+          "code": "SC"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "API & Micro Services",
+          "code": "API"
+        },
+        {
+          "time": "1:50 - 4:20",
+          "subject": "T-HUB Technical Training / Employability",
+          "code": "THUB"
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Engineering Economics & Management",
+          "code": "EEM"
+        },
+        {
+          "time": "1:50 - 4:20",
+          "subject": "T-HUB Technical Training / Employability",
+          "code": "THUB"
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Computer Vision",
+          "code": "CV"
+        },
+        {
+          "time": "10:20 - 11:10",
+          "subject": "API & Micro Services",
+          "code": "API"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Machine Learning",
+          "code": "ML"
+        },
+        {
+          "time": "1:50 - 4:20",
+          "subject": "T-HUB Technical Training / Employability",
+          "code": "THUB"
+        }
+      ],
+      "Thursday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "OOAD",
+          "code": "OOAD"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "Computer Vision",
+          "code": "CV"
+        },
+        {
+          "time": "1:50 - 4:20",
+          "subject": "T-HUB Technical Training / Employability",
+          "code": "THUB"
+        }
+      ],
+      "Friday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Soft Computing",
+          "code": "SC"
+        },
+        {
+          "time": "10:20 - 11:10",
+          "subject": "Computer Networks",
+          "code": "CN"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "API & Micro Services",
+          "code": "API"
+        },
+        {
+          "time": "1:50 - 4:20",
+          "subject": "T-HUB Technical Training / Employability",
+          "code": "THUB"
+        }
+      ],
+      "Saturday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "ES-Aptitude",
+          "code": "APT"
+        },
+        {
+          "time": "11:20 - 12:10",
+          "subject": "ES-Softskills",
+          "code": "SS"
+        },
+        {
+          "time": "1:50 - 4:20",
+          "subject": "T-HUB Technical Training / Employability",
+          "code": "THUB"
+        }
+      ]
+    },
+    "faculty": [
+      {
+        "subject": "Computer Networks",
+        "code": "CN",
+        "faculty": "K. Naga Rajani"
+      },
+      {
+        "subject": "Machine Learning",
+        "code": "ML",
+        "faculty": "Mr. G. Siva Shankar"
+      },
+      {
+        "subject": "OOAD",
+        "code": "OOAD",
+        "faculty": "K. Naga Rajani"
+      },
+      {
+        "subject": "Engineering Economics & Management",
+        "code": "EEM",
+        "faculty": "Dr. N. Bhanu Teja"
+      },
+      {
+        "subject": "Computer Vision",
+        "code": "CV",
+        "faculty": "Mr. D. Satyanarayana"
+      },
+      {
+        "subject": "API & Micro Services",
+        "code": "API",
+        "faculty": "Kasimbee Shaik"
+      },
+      {
+        "subject": "Soft Computing",
+        "code": "SC",
+        "faculty": "Dr. M. Vamsi Krishna"
+      },
+      {
+        "subject": "Softskills",
+        "code": "SS",
+        "faculty": "GVS Kiran Kumar"
+      },
+      {
+        "subject": "Aptitude",
+        "code": "APT",
+        "faculty": "S. Tejeswar Reddy"
+      },
+      {
+        "subject": "T-HUB Employability In-Charge",
+        "code": "THUB",
+        "faculty": "Mr. M. Subrahmanyam / G. Durga Prasad"
+      }
+    ]
+  },
+  {
+    "section": "AIML 7th Sem - Sec AIML-1 (CV-104)",
+    "roomNo": "104",
+    "hallName": "CV-104",
+    "floor": "First Floor",
+    "block": "Bhaskar Bhavan",
+    "semester": "IV B.Tech / VII Sem (A.Y. 2026-27)",
+    "schedule": {
+      "Monday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Quantum Science & Technology",
+          "code": "Q&ST"
+        },
+        {
+          "time": "11:10 - 12:50",
+          "subject": "Prompt Engineering Lab",
+          "code": "PE LAB"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Quantum Science & Technology",
+          "code": "Q&ST"
+        },
+        {
+          "time": "2:40 - 3:30",
+          "subject": "Human Resource & Project Management",
+          "code": "HR&PM"
+        },
+        {
+          "time": "3:30 - 4:20",
+          "subject": "Makeup/FIP",
+          "code": "FIP"
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Quantum Science & Technology",
+          "code": "Q&ST"
+        },
+        {
+          "time": "10:20 - 11:10",
+          "subject": "Block Chain Technology",
+          "code": "BCT"
+        },
+        {
+          "time": "11:10 - 12:00",
+          "subject": "Smart Manufacturing",
+          "code": "SM"
+        },
+        {
+          "time": "12:00 - 12:50",
+          "subject": "Generative AI",
+          "code": "GEnAI"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Research Methodology",
+          "code": "RM"
+        },
+        {
+          "time": "2:40 - 3:30",
+          "subject": "Human Resource & Project Management",
+          "code": "HR&PM"
+        },
+        {
+          "time": "3:30 - 4:20",
+          "subject": "Makeup/FIP",
+          "code": "FIP"
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Quantum Science & Technology",
+          "code": "Q&ST"
+        },
+        {
+          "time": "10:20 - 11:10",
+          "subject": "Coding",
+          "code": "CC"
+        },
+        {
+          "time": "11:10 - 12:00",
+          "subject": "Generative AI",
+          "code": "GEnAI"
+        },
+        {
+          "time": "12:00 - 12:50",
+          "subject": "Block Chain Technology",
+          "code": "BCT"
+        },
+        {
+          "time": "1:50 - 4:20",
+          "subject": "GLOBAL PLACEMENTS / PSA",
+          "code": "PSA"
+        }
+      ],
+      "Thursday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Smart Manufacturing",
+          "code": "SM"
+        },
+        {
+          "time": "10:20 - 11:10",
+          "subject": "Human Resource & Project Management",
+          "code": "HR&PM"
+        },
+        {
+          "time": "11:10 - 12:00",
+          "subject": "Block Chain Technology",
+          "code": "BCT"
+        },
+        {
+          "time": "12:00 - 12:50",
+          "subject": "Generative AI",
+          "code": "GEnAI"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Smart Manufacturing",
+          "code": "SM"
+        },
+        {
+          "time": "2:40 - 3:30",
+          "subject": "Coding",
+          "code": "CC"
+        },
+        {
+          "time": "3:30 - 4:20",
+          "subject": "Makeup/FIP",
+          "code": "FIP"
+        }
+      ],
+      "Friday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Human Resource & Project Management",
+          "code": "HR&PM"
+        },
+        {
+          "time": "10:20 - 11:10",
+          "subject": "Research Methodology",
+          "code": "RM"
+        },
+        {
+          "time": "11:10 - 12:00",
+          "subject": "Smart Manufacturing",
+          "code": "SM"
+        },
+        {
+          "time": "12:00 - 12:50",
+          "subject": "Coding",
+          "code": "CC"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Block Chain Technology",
+          "code": "BCT"
+        },
+        {
+          "time": "2:40 - 3:30",
+          "subject": "Generative AI",
+          "code": "GEnAI"
+        },
+        {
+          "time": "3:30 - 4:20",
+          "subject": "Makeup/FIP",
+          "code": "FIP"
+        }
+      ]
+    },
+    "faculty": [
+      {
+        "subject": "Generative AI",
+        "code": "GEnAI",
+        "faculty": "Dr. Manikyala Rao"
+      },
+      {
+        "subject": "Human Resource & Project Management",
+        "code": "HR&PM",
+        "faculty": "Dr. Maxim Raul Bharathi"
+      },
+      {
+        "subject": "Block Chain Technology",
+        "code": "BCT",
+        "faculty": "Dr. K. Naga Bhargavi"
+      },
+      {
+        "subject": "Smart Manufacturing",
+        "code": "SM",
+        "faculty": "Dr. Md Ahasan"
+      },
+      {
+        "subject": "Quantum Science & Technology",
+        "code": "Q&ST",
+        "faculty": "Dr. N. Rajesh"
+      },
+      {
+        "subject": "Prompt Engineering Lab",
+        "code": "PE LAB",
+        "faculty": "Dr. T. Chandra Sekhar / Dr. Sravan Kumar"
+      },
+      {
+        "subject": "Research Methodology",
+        "code": "RM",
+        "faculty": "Dr. N. Rambabu"
+      },
+      {
+        "subject": "Coding",
+        "code": "CC",
+        "faculty": "Chaitanya / E. Rahelu Ramya / V. Shalem Teja"
+      },
+      {
+        "subject": "Makeup/FIP",
+        "code": "FIP",
+        "faculty": "Anusha / Dharani / Annapurna"
+      },
+      {
+        "subject": "PSA",
+        "code": "PSA",
+        "faculty": "Dr. T. Chandra Sekhar"
+      }
+    ]
+  },
+  {
+    "section": "AIML 7th Sem - Sec AIML-2 (CV-115)",
+    "roomNo": "115",
+    "hallName": "CV-115",
+    "floor": "First Floor",
+    "block": "Bhaskar Bhavan",
+    "semester": "IV B.Tech / VII Sem (A.Y. 2026-27)",
+    "schedule": {
+      "Monday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Block Chain Technology",
+          "code": "BCT"
+        },
+        {
+          "time": "10:20 - 11:10",
+          "subject": "Quantum Science & Technology",
+          "code": "Q&ST"
+        },
+        {
+          "time": "11:10 - 12:00",
+          "subject": "Research Methodology",
+          "code": "RM"
+        },
+        {
+          "time": "12:00 - 12:50",
+          "subject": "Human Resource & Project Management",
+          "code": "HR&PM"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Human Resource & Project Management",
+          "code": "HR&PM"
+        },
+        {
+          "time": "2:40 - 3:30",
+          "subject": "Generative AI",
+          "code": "GEnAI"
+        },
+        {
+          "time": "3:30 - 4:20",
+          "subject": "Makeup/FIP",
+          "code": "FIP"
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "Smart Manufacturing",
+          "code": "SM"
+        },
+        {
+          "time": "11:10 - 12:00",
+          "subject": "Coding",
+          "code": "CC"
+        },
+        {
+          "time": "12:00 - 12:50",
+          "subject": "Quantum Science & Technology",
+          "code": "Q&ST"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Quantum Science & Technology",
+          "code": "Q&ST"
+        },
+        {
+          "time": "2:40 - 3:30",
+          "subject": "Generative AI",
+          "code": "GEnAI"
+        },
+        {
+          "time": "3:30 - 4:20",
+          "subject": "Makeup/FIP",
+          "code": "FIP"
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Human Resource & Project Management",
+          "code": "HR&PM"
+        },
+        {
+          "time": "10:20 - 11:10",
+          "subject": "Coding",
+          "code": "CC"
+        },
+        {
+          "time": "11:10 - 12:00",
+          "subject": "Quantum Science & Technology",
+          "code": "Q&ST"
+        },
+        {
+          "time": "12:00 - 12:50",
+          "subject": "Block Chain Technology",
+          "code": "BCT"
+        },
+        {
+          "time": "1:50 - 4:20",
+          "subject": "GLOBAL PLACEMENTS / PSA",
+          "code": "PSA"
+        }
+      ],
+      "Thursday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "Smart Manufacturing",
+          "code": "SM"
+        },
+        {
+          "time": "11:10 - 12:00",
+          "subject": "Research Methodology",
+          "code": "RM"
+        },
+        {
+          "time": "12:00 - 12:50",
+          "subject": "Block Chain Technology",
+          "code": "BCT"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Generative AI",
+          "code": "GEnAI"
+        },
+        {
+          "time": "2:40 - 3:30",
+          "subject": "Block Chain Technology",
+          "code": "BCT"
+        },
+        {
+          "time": "3:30 - 4:20",
+          "subject": "Makeup/FIP",
+          "code": "FIP"
+        }
+      ],
+      "Friday": [
+        {
+          "time": "9:30 - 12:00",
+          "subject": "Prompt Engineering Lab",
+          "code": "PE LAB"
+        },
+        {
+          "time": "12:00 - 12:50",
+          "subject": "Coding",
+          "code": "CC"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Human Resource & Project Management",
+          "code": "HR&PM"
+        },
+        {
+          "time": "2:40 - 3:30",
+          "subject": "Generative AI",
+          "code": "GEnAI"
+        },
+        {
+          "time": "3:30 - 4:20",
+          "subject": "Makeup/FIP",
+          "code": "FIP"
+        }
+      ]
+    },
+    "faculty": [
+      {
+        "subject": "Generative AI",
+        "code": "GEnAI",
+        "faculty": "Dr. T. Chandra Sekhar"
+      },
+      {
+        "subject": "Human Resource & Project Management",
+        "code": "HR&PM",
+        "faculty": "Dr. P. Gangadhar Rao"
+      },
+      {
+        "subject": "Block Chain Technology",
+        "code": "BCT",
+        "faculty": "Dr. Sravan Kumar"
+      },
+      {
+        "subject": "Smart Manufacturing",
+        "code": "SM",
+        "faculty": "Mr. K. L. Kishore"
+      },
+      {
+        "subject": "Quantum Science & Technology",
+        "code": "Q&ST",
+        "faculty": "Dr. N. Rajesh"
+      },
+      {
+        "subject": "Prompt Engineering Lab",
+        "code": "PE LAB",
+        "faculty": "Dr. Sravan Kumar / Dr. N. Rajesh"
+      },
+      {
+        "subject": "Research Methodology",
+        "code": "RM",
+        "faculty": "Dr. KRKV Prasad"
+      },
+      {
+        "subject": "Coding",
+        "code": "CC",
+        "faculty": "P. Shreya Prabhalitha / K. Greeshma / E. Rahelu Ramya"
+      },
+      {
+        "subject": "Makeup/FIP",
+        "code": "FIP",
+        "faculty": "Bharathi / Satya Jyothi / Aparna"
+      },
+      {
+        "subject": "PSA",
+        "code": "PSA",
+        "faculty": "Dr. Sravan Kumar"
+      }
+    ]
+  },
+  {
+    "section": "AIML 7th Sem - Sec AIML-3 (CV-116)",
+    "roomNo": "116",
+    "hallName": "CV-116",
+    "floor": "First Floor",
+    "block": "Bhaskar Bhavan",
+    "semester": "IV B.Tech / VII Sem (A.Y. 2026-27)",
+    "schedule": {
+      "Monday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Human Resource & Project Management",
+          "code": "HR&PM"
+        },
+        {
+          "time": "10:20 - 12:00",
+          "subject": "Research Methodology",
+          "code": "RM"
+        },
+        {
+          "time": "12:00 - 12:50",
+          "subject": "Human Resource & Project Management",
+          "code": "HR&PM"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Block Chain Technology",
+          "code": "BCT"
+        },
+        {
+          "time": "2:40 - 3:30",
+          "subject": "Generative AI",
+          "code": "GEnAI"
+        },
+        {
+          "time": "3:30 - 4:20",
+          "subject": "Makeup/FIP",
+          "code": "FIP"
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Quantum Science & Technology",
+          "code": "Q&ST"
+        },
+        {
+          "time": "10:20 - 11:10",
+          "subject": "Generative AI",
+          "code": "GEnAI"
+        },
+        {
+          "time": "11:10 - 12:00",
+          "subject": "Block Chain Technology",
+          "code": "BCT"
+        },
+        {
+          "time": "12:00 - 12:50",
+          "subject": "Human Resource & Project Management",
+          "code": "HR&PM"
+        },
+        {
+          "time": "1:50 - 3:30",
+          "subject": "Smart Manufacturing",
+          "code": "SM"
+        },
+        {
+          "time": "3:30 - 4:20",
+          "subject": "Makeup/FIP",
+          "code": "FIP"
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Quantum Science & Technology",
+          "code": "Q&ST"
+        },
+        {
+          "time": "10:20 - 11:10",
+          "subject": "Generative AI",
+          "code": "GEnAI"
+        },
+        {
+          "time": "11:10 - 12:00",
+          "subject": "Block Chain Technology",
+          "code": "BCT"
+        },
+        {
+          "time": "12:00 - 12:50",
+          "subject": "Quantum Science & Technology",
+          "code": "Q&ST"
+        },
+        {
+          "time": "1:50 - 4:20",
+          "subject": "GLOBAL PLACEMENTS / PSA",
+          "code": "PSA"
+        }
+      ],
+      "Thursday": [
+        {
+          "time": "9:30 - 11:10",
+          "subject": "Prompt Engineering Lab",
+          "code": "PE LAB"
+        },
+        {
+          "time": "12:00 - 12:50",
+          "subject": "Coding",
+          "code": "CC"
+        },
+        {
+          "time": "1:50 - 3:30",
+          "subject": "Smart Manufacturing",
+          "code": "SM"
+        },
+        {
+          "time": "3:30 - 4:20",
+          "subject": "Makeup/FIP",
+          "code": "FIP"
+        }
+      ],
+      "Friday": [
+        {
+          "time": "9:30 - 10:20",
+          "subject": "Quantum Science & Technology",
+          "code": "Q&ST"
+        },
+        {
+          "time": "10:20 - 11:10",
+          "subject": "Coding",
+          "code": "CC"
+        },
+        {
+          "time": "11:10 - 12:00",
+          "subject": "Block Chain Technology",
+          "code": "BCT"
+        },
+        {
+          "time": "12:00 - 12:50",
+          "subject": "Generative AI",
+          "code": "GEnAI"
+        },
+        {
+          "time": "1:50 - 2:40",
+          "subject": "Coding",
+          "code": "CC"
+        },
+        {
+          "time": "2:40 - 3:30",
+          "subject": "Human Resource & Project Management",
+          "code": "HR&PM"
+        },
+        {
+          "time": "3:30 - 4:20",
+          "subject": "Makeup/FIP",
+          "code": "FIP"
+        }
+      ]
+    },
+    "faculty": [
+      {
+        "subject": "Generative AI",
+        "code": "GEnAI",
+        "faculty": "Dr. Manikyala Rao"
+      },
+      {
+        "subject": "Human Resource & Project Management",
+        "code": "HR&PM",
+        "faculty": "Dr. Dara Rambabu"
+      },
+      {
+        "subject": "Block Chain Technology",
+        "code": "BCT",
+        "faculty": "Dr. K. Naga Bhargavi"
+      },
+      {
+        "subject": "Smart Manufacturing",
+        "code": "SM",
+        "faculty": "Dr. G. V. K. Pradeep"
+      },
+      {
+        "subject": "Quantum Science & Technology",
+        "code": "Q&ST",
+        "faculty": "Dr. T. Chandra Sekhar"
+      },
+      {
+        "subject": "Prompt Engineering Lab",
+        "code": "PE LAB",
+        "faculty": "Dr. N. Rajesh / Dr. T. Chandra Sekhar"
+      },
+      {
+        "subject": "Research Methodology",
+        "code": "RM",
+        "faculty": "Dr. S. Ramasubbanna"
+      },
+      {
+        "subject": "Coding",
+        "code": "CC",
+        "faculty": "V. Shalem Teja / K. Greeshma / G. Sravani"
+      },
+      {
+        "subject": "Makeup/FIP",
+        "code": "FIP",
+        "faculty": "Atchutha / Sirisha / Naga Jyothi"
+      },
+      {
+        "subject": "PSA",
+        "code": "PSA",
+        "faculty": "Dr. N. Rajesh"
+      }
+    ]
+  }
+]
